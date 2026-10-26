@@ -25,7 +25,7 @@ Hazırlamadan önce `posts/` klasörüne ve Metricool'daki zamanlanmış gönder
 
 - Metricool brand/blogId: `7665597`; ağlar: instagram (@celikkayamulk) ve facebook (Çelikkaya Mülk Yapı A.Ş. sayfası)
 - Dosya adresi: `https://raw.githubusercontent.com/emincelikkaya/celikkaya-instagram/<commit>/posts/<YYYY-MM-DD>/<dosya>` (commit kısaltması kullan, `main` yerine; önbellek sorunlarını önler)
-- Şablonlar: `tools/slides.js` (carousel), `tools/reel.html` (reels). Üretim: `tools/render_carousel.py`, `tools/render_reel.py`. Fontlar ve logo `tools/` içinde.
+- Şablonlar: `tools/slides.js` (carousel), `remotion/src/Reel.jsx` (reels, Remotion; ücretsiz lisans: şirket 3 çalışandan küçük). Yedek reels şablonu: `tools/reel.html` + `tools/render_reel.py`. Fontlar ve logo `tools/` içinde.
 - Konu listesi ve kullanım kaydı: `KONULAR.md`
 
 ## Adımlar (her gün için)
@@ -33,12 +33,18 @@ Hazırlamadan önce `posts/` klasörüne ve Metricool'daki zamanlanmış gönder
 1. **Konu:** `KONULAR.md`'de durumu boş olan ilk konuyu al. Hap bilgi numarası = `posts/` içindeki en büyük `no` + 1.
 2. **Doğrulama:** Oran, süre, tutar, madde numarası içeren her bilgiyi resmi kaynaktan doğrula: mevzuat.gov.tr (6306 sayılı Kanun: `https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5`), resmigazete.gov.tr, csb.gov.tr. Bu siteler otomatik okumaya kapalı; kullanıcının bilgisayarındaki Claude tarayıcısıyla aç ve `javascript_tool` ile `document.body.innerText` içinde ilgili maddeyi ara. Doğrulayamadığın bilgiyi kullanma; konunun özü doğrulanamıyorsa konuyu `KONULAR.md`'de "ertelendi: <neden>" olarak işaretle ve sıradakine geç.
 3. **İçerik:** `posts/<tarih>/post.json` yaz (şema: `posts/2026-10-27/post.json`). Kapak başlığı en fazla 8 kelime ve soru biçiminde; tam 5 madde (reels süresi buna göre ayarlı), her madde başlığı en fazla 7 kelime, açıklama en fazla 25 kelime; son sayfada doğrulanmış 2–3 bilgi ve `note` alanında "Bilgilendirme amaçlıdır. Kaynak: ..." satırı. Abartılı vaat, korku dili, rakip firma, kişisel veri yok. Hukuki tavsiye verme.
-4. **Görseller ve video (bulut çalışma alanında, bilgisayar gerekmez):**
+4. **Carousel (bulut çalışma alanında, bilgisayar gerekmez):**
    - `python3 tools/render_carousel.py posts/<tarih>/post.json posts/<tarih> hap-bilgi-<no>`
-   - `python3 tools/render_reel.py posts/<tarih>/post.json posts/<tarih>/hap-bilgi-<no>-reels.mp4` (yaklaşık 2 dakika; komut zaman aşımını 10 dakika ver)
-   - `python3 tools/render_reel.py posts/<tarih>/post.json /tmp/onizleme-reels.png --preview`
-   - `posts/<tarih>/onizleme.png` ve `/tmp/onizleme-reels.png` dosyalarını Read ile aç ve kontrol et: taşan metin, kesik satır, yanlış Türkçe karakter, konuşma balonunun metnin üstüne binmesi olmamalı. Sorun varsa metni kısaltıp tekrar üret.
-5. **Yükleme:** `onizleme.png` hariç sayfaları, reels videosunu ve `post.json`'u commit'le, `main`'e push et. Commit mesajı: `Hap Bilgi #<no>: <konu>`. Push sonrası `git rev-parse --short HEAD` ile commit kısaltmasını al.
+   - `posts/<tarih>/onizleme.png`'yi Read ile aç ve kontrol et: taşan metin, kesik satır, yanlış Türkçe karakter olmamalı. Sorun varsa metni kısaltıp tekrar üret.
+   - Reels'in de aynı metinle sorunsuz görüneceğini önceden görmek için: `python3 tools/render_reel.py posts/<tarih>/post.json /tmp/onizleme-reels.png --preview` ve dosyayı Read ile aç (konuşma balonu metnin üstüne binmemeli).
+5. **Yükleme ve reels (Remotion, GitHub Actions):**
+   - `onizleme.png` hariç carousel sayfalarını ve `post.json`'u commit'le, `main`'e push et. Commit mesajı: `Hap Bilgi #<no>: <konu>`.
+   - Bu push `.github/workflows/reels.yml` iş akışını başlatır: Remotion (`remotion/src/Reel.jsx`) videosu olmayan her gönderi için `hap-bilgi-<no>-reels.mp4` üretip depoya kendisi yazar (birkaç dakika sürer).
+   - İş akışını bekle: `gh api repos/emincelikkaya/celikkaya-instagram/actions/runs --jq '.workflow_runs[0] | [.id,.status,.conclusion]'` ile 15 saniyede bir kontrol et (en fazla 20 dakika). `completed success` olunca `git pull`.
+   - Videoyu kontrol et: `ffprobe` ile 1080x1920 ve yaklaşık 29 sn olduğunu doğrula; `ffmpeg -ss 6 -i <mp4> -frames:v 1 -vf scale=270:480 /tmp/kare.png` ile bir kare çıkarıp Read ile bak.
+   - İş akışı başarısız olursa veya 20 dakikada bitmezse yedek yol: `python3 tools/render_reel.py posts/<tarih>/post.json posts/<tarih>/hap-bilgi-<no>-reels.mp4` (yaklaşık 2 dakika; komut zaman aşımını 10 dakika ver), sonra commit + push. Bildirimde yedek yolun kullanıldığını belirt.
+   - Video depodayken `git rev-parse --short HEAD` ile commit kısaltmasını al; Metricool adreslerinde bunu kullan.
+   - Bir videoyu yeniden üretmek gerekirse: `gh api -X POST repos/emincelikkaya/celikkaya-instagram/actions/workflows/reels.yml/dispatches -f ref=main -f 'inputs[tarih]=<YYYY-MM-DD>'`.
 6. **Zamanlama (Metricool `createScheduledPost`, blogId `7665597`, `autoPublish: true`, providers `[{"network":"instagram"},{"network":"facebook"}]`):**
    - **Reels:** tarih `<gün>T12:30:00+03:00`; media = `[<mp4 adresi>]`; `instagramData` `{"type":"REEL","collaborators":[],"showReelOnFeed":true,"isAiGenerated":false}`; `facebookData` `{"type":"REEL"}`; `videoCoverMilliseconds: 2500` (kapak: başlığın göründüğü an).
    - **Carousel:** tarih `<gün>T20:30:00+03:00`; media = 7 png adresi sırayla; `instagramData` `{"type":"POST","collaborators":[],"showReelOnFeed":true,"isAiGenerated":false}`; `facebookData` `{"type":"POST"}`.
