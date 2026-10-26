@@ -32,6 +32,7 @@ Hazırlamadan önce `posts/` klasörüne ve Metricool'daki zamanlanmış gönder
    - `resize_window` ile 540x675 ayarla.
    - `tools/slides.js` dosyasının tamamını `javascript_tool` ile çalıştır, sonra `await window.__build(<post.json içeriği>)`.
    - Her sayfa i (0'dan başlar) ve parça t (0..3) için: `await window.__show(i,t)` ardından `computer` `zoom` region `[0,0,540,675]`, `scale: 1`. (scale 1'den küçük olursa dosya da küçülür.) `browser_batch` ile sayfa başına 8 adım gönder.
+   - Çekilen ilk parçayı kontrol et: görüntü ayarı oturmadan çekilirse içerik 2 kat büyük görünür. Öyleyse o parçayı yeniden çek.
    - Her zoom sonucu bir PNG yolu verir (`/root/.claude/projects/.../tool-results/...png`). Yolları sırayla not al.
    - `python3 tools/stitch.py posts/<tarih> hap-bilgi-<no> <parça yolları sırayla>` çalıştır. `onizleme.png`'yi Read ile aç ve kontrol et: taşan metin, kesik satır, yanlış Türkçe karakter olmamalı. Sorun varsa metni kısaltıp tekrar üret.
    - Bitince `resize_window` preset `desktop`.

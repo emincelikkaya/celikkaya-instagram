@@ -2,19 +2,43 @@
   "no": 2,
   "konu": "Riskli yapı tespiti nasıl yapılır, kime başvurulur?",
   "yayin": "2026-10-27T20:30:00+03:00",
-  "kaynaklar": ["https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"],
-  "cover": {"title": "Riskli yapı tespiti nasıl yapılır?", "subtitle": "Kim başvurur, kim öder, sonra ne olur?"},
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Riskli yapı tespiti nasıl yapılır?",
+    "subtitle": "Kim başvurur, kim öder, sonra ne olur?"
+  },
   "items": [
-    {"h": "Kim başvurur?", "p": "Tespiti öncelikle yapı malikleri ya da kanuni temsilcileri yaptırır."},
-    {"h": "Tespiti kim yapar?", "p": "Kentsel Dönüşüm Başkanlığınca lisanslandırılmış kurum ve kuruluşlar. Sonuç Başkanlığa veya İdareye bildirilir."},
-    {"h": "Masrafı kim öder?", "p": "Tespitin masrafı yapı maliklerine aittir."},
-    {"h": "Malikler yaptırmazsa ne olur?", "p": "Başkanlık veya İdare süre verir. Bu süre içinde yaptırılmazsa tespiti kendisi yapar ya da yaptırır."},
-    {"h": "Sonuç size nasıl ulaşır?", "p": "Tutanak binaya asılır, e-Devlet üzerinden bildirilir ve muhtarlıkta 15 gün ilan edilir."}
+    {
+      "h": "Kim başvurur?",
+      "p": "Tespiti öncelikle yapı malikleri ya da kanuni temsilcileri yaptırır."
+    },
+    {
+      "h": "Tespiti kim yapar?",
+      "p": "Kentsel Dönüşüm Başkanlığınca lisanslandırılmış kurum ve kuruluşlar. Sonuç Başkanlığa veya İdareye bildirilir."
+    },
+    {
+      "h": "Masrafı kim öder?",
+      "p": "Tespitin masrafı yapı maliklerine aittir."
+    },
+    {
+      "h": "Malikler yaptırmazsa ne olur?",
+      "p": "Başkanlık veya İdare süre verir. Bu süre içinde yaptırılmazsa tespiti kendisi yapar ya da yaptırır."
+    },
+    {
+      "h": "Sonuç size nasıl ulaşır?",
+      "p": "Tutanak binaya asılır, e-Devlet üzerinden bildirilir ve muhtarlıkta 15 gün ilan edilir."
+    }
   ],
   "last": {
     "title": "Sonuca itiraz için 15 gününüz var.",
     "accent": "15 gününüz",
-    "bullets": ["İtirazları üniversite öğretim üyeleri ve Bakanlık/Başkanlık personelinden oluşan teknik heyet inceler.", "Riskli yapı bilgisi tapunun beyanlar hanesine işlenir."],
+    "bullets": [
+      "İtirazları üniversite öğretim üyeleri ve Bakanlık/Başkanlık personelinden oluşan teknik heyet inceler.",
+      "Riskli yapı bilgisi tapunun beyanlar hanesine işlenir."
+    ],
     "note": "Bilgilendirme amaçlıdır; kişisel durumunuz için uzmana danışın. Kaynak: 6306 sayılı Kanun, md. 3"
-  }
+  },
+  "metricool_id": 406743561
 }
