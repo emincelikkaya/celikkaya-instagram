@@ -14,6 +14,7 @@ html, body { margin: 0; background: #151616; }
 </style>
 </head>
 <body>
+<img src="logo-acik.png" alt="" style="position:absolute;left:-9999px;width:1px;height:1px">
 <div id="stage">
   <div id="bg" class="abs" style="inset:0"></div>
   <div id="tape" class="abs" style="left:-200px;right:-200px;height:90px;top:1720px;transform:rotate(-4deg)"></div>
@@ -25,8 +26,8 @@ html, body { margin: 0; background: #151616; }
       <!-- gövde: antrasit iş tulumu, altın reflektör şerit -->
       <path d="M95 420 Q220 360 345 420 L370 640 L70 640 Z" fill="#2B2D2D"/>
       <rect x="92" y="500" width="256" height="22" fill="#CBAA7F"/>
-      <rect x="196" y="440" width="48" height="48" rx="6" fill="#151616" stroke="#CBAA7F" stroke-width="4"/>
-      <text x="220" y="474" text-anchor="middle" font-family="Rajdhani" font-weight="700" font-size="28" fill="#CBAA7F">ÇK</text>
+      <!-- göğüste gerçek Çelikkaya logosu (CK simgesi) -->
+      <image href="logo-ikon.png" x="183" y="418" width="74" height="75"/>
       <!-- sol kol (sabit) -->
       <path d="M105 430 Q60 500 80 590" stroke="#2B2D2D" stroke-width="46" fill="none" stroke-linecap="round"/>
       <circle cx="80" cy="592" r="26" fill="#F2C9A0"/>
@@ -164,7 +165,7 @@ window.render = (t) => {
   // alt bant: marka
   const showFoot = s.type === 'outro';
   $('foot').style.height = showFoot ? '0px' : '0px';
-  $('foot').innerHTML = showFoot ? `<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:#0E0F0F;border-top:4px solid #CBAA7F;display:flex;align-items:center;justify-content:space-between;padding:0 80px;opacity:${ease((lt - 1) / 0.4)}"><div style="display:flex;align-items:center;gap:20px"><div class="r" style="width:72px;height:72px;box-sizing:border-box;border:4px solid #CBAA7F;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:38px;color:#CBAA7F">ÇK</div><div class="r" style="font-weight:600;font-size:44px;letter-spacing:10px"><span style="color:#F6F2EC">ÇELİK</span><span style="color:#CBAA7F">KAYA</span></div></div><div class="r" style="font-weight:600;font-size:36px;color:#F6F2EC">@celikkayamulk</div></div>` : '';
+  $('foot').innerHTML = showFoot ? `<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:#0E0F0F;border-top:4px solid #CBAA7F;display:flex;align-items:center;justify-content:space-between;padding:0 80px;opacity:${ease((lt - 1) / 0.4)}"><img src="logo-acik.png" style="height:96px;width:auto;display:block" alt="Çelikkaya Mülk Yapı A.Ş."><div class="r" style="font-weight:600;font-size:36px;color:#F6F2EC">@celikkayamulk</div></div>` : '';
   // outroda karakter alt bandın üstünde kalsın
   return s.type;
 };
