@@ -1,0 +1,72 @@
+name: Reels üret (Remotion)
+
+# posts/<tarih>/post.json eklendiğinde veya elle çalıştırıldığında,
+# reels videosu olmayan her gönderi için Remotion ile video üretir ve depoya geri yazar.
+on:
+  push:
+    branches: [main]
+    paths: ['posts/**/post.json']
+  workflow_dispatch:
+    inputs:
+      tarih:
+        description: 'Yeniden üretilecek gönderi tarihi (YYYY-MM-DD). Boş bırakılırsa videosu olmayanların hepsi.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reels
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Remotion kurulumu
+        working-directory: remotion
+        run: npm install --no-audit --no-fund
+
+      - name: Fontlar ve logolar
+        run: |
+          mkdir -p remotion/public/fonts
+          cp tools/fonts/*.ttf remotion/public/fonts/
+          cp tools/logo.png tools/logo-acik.png remotion/public/
+
+      - name: Videoları üret
+        env:
+          TARIH: ${{ github.event.inputs.tarih }}
+        run: |
+          set -e
+          for post in posts/*/post.json; do
+            dir=$(dirname "$post"); tarih=$(basename "$dir")
+            no=$(python3 -c "import json,sys;print(json.load(open('$post'))['no'])")
+            out="$dir/hap-bilgi-$no-reels.mp4"
+            if [ -n "$TARIH" ]; then
+              [ "$tarih" = "$TARIH" ] || continue
+            else
+              [ -f "$out" ] && continue
+            fi
+            echo "::group::$tarih (Hap Bilgi #$no)"
+            python3 tools/reel_audio.py "$post" remotion/public/audio.wav
+            (cd remotion && npx remotion render src/index.jsx HapBilgiReel "../$out" --props="../$post" --codec=h264 --crf=20 --log=info)
+            echo "::endgroup::"
+          done
+
+      - name: Depoya yaz
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts/*/*-reels.mp4 || true
+          if git diff --cached --quiet; then echo "Yeni video yok"; exit 0; fi
+          git commit -m "Reels videoları (Remotion)"
+          git pull --rebase
+          git push
