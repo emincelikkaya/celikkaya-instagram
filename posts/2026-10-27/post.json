@@ -1,0 +1,21 @@
+{
+  "no": 1,
+  "konu": "Binanız kentsel dönüşüme girebilir mi? 5 soruda test",
+  "yayin": "2026-10-27T20:30:00+03:00",
+  "metricool_id": 406701068,
+  "kaynaklar": ["https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"],
+  "cover": {"title": "Binanız kentsel dönüşüme girebilir mi?", "subtitle": "5 soruda kendinizi test edin"},
+  "items": [
+    {"h": "Binanız 1999'dan önce mi yapıldı?", "p": "1999 depreminin ardından yapı denetimi zorunlu hale geldi. Bu tarihten önce yapılan binalar daha az denetimle inşa edildi."},
+    {"h": "Kolon ve kirişlerde çatlak var mı?", "p": "Taşıyıcı elemanlarda çatlak, paslanmış demir ya da dökülen beton dikkat edilmesi gereken işaretlerdir."},
+    {"h": "Zemin katta kolon ya da duvar kesildi mi?", "p": "Dükkân açmak için yapılan kesme ve tadilatlar binanın taşıyıcı sistemini zayıflatabilir."},
+    {"h": "Binaya sonradan kat eklendi mi?", "p": "Projede olmayan kat ilavesi, binanın hesaplanmamış bir yükü taşıması demektir."},
+    {"h": "Bodrumda sürekli nem ya da su var mı?", "p": "Uzun süreli nem, betonarmedeki demirin paslanmasına yol açabilir."}
+  ],
+  "last": {
+    "title": "3 veya daha fazla \"evet\" dediyseniz riskli yapı tespiti yaptırın.",
+    "accent": "\"evet\"",
+    "bullets": ["Tespiti, Kentsel Dönüşüm Başkanlığınca lisanslandırılmış kuruluşlar yapar.", "Masrafı yapı maliklerine aittir.", "Sonuca 15 gün içinde itiraz edilebilir."],
+    "note": "Bu test bilgilendirme amaçlıdır; kesin sonuç için teknik inceleme gerekir. Kaynak: 6306 sayılı Kanun, md. 3"
+  }
+}
