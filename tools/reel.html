@@ -20,6 +20,8 @@ html, body { margin: 0; background: #151616; }
   <div id="tape" class="abs" style="left:-200px;right:-200px;height:90px;top:1720px;transform:rotate(-4deg)"></div>
   <div id="progress" class="abs" style="left:60px;right:60px;top:110px;height:10px;display:flex;gap:10px"></div>
   <div id="tag" class="abs r" style="left:60px;top:150px;font-weight:700;font-size:38px;letter-spacing:8px"></div>
+  <img id="wm" src="logo-acik.png" alt="Çelikkaya Mülk Yapı A.Ş." class="abs" style="right:60px;top:138px;height:58px;width:auto">
+  <img src="logo.png" alt="" style="position:absolute;left:-9999px;width:1px;height:1px">
   <div id="content" class="abs" style="left:80px;right:80px;top:300px"></div>
   <svg id="char" class="abs" width="440" height="640" viewBox="0 0 440 640" style="left:40px;top:1080px;overflow:visible">
     <g id="body">
@@ -36,9 +38,6 @@ html, body { margin: 0; background: #151616; }
         <circle cx="422" cy="292" r="28" fill="#F2C9A0"/>
         <rect x="414" y="236" width="16" height="50" rx="8" fill="#F2C9A0"/>
       </g>
-      <!-- yaka kartı: kolların önünde -->
-      <rect x="112" y="418" width="216" height="68" rx="10" fill="#F6F2EC" stroke="#CBAA7F" stroke-width="3"/>
-      <image href="logo.png" x="120" y="427" width="200" height="48"/>
       <!-- kafa -->
       <g id="head" style="transform-origin:220px 300px">
         <ellipse cx="220" cy="270" rx="120" ry="130" fill="#F2C9A0"/>
@@ -111,6 +110,10 @@ window.render = (t) => {
   $('progress').style.opacity = s.type === 'hook' ? 0 : 1;
   $('tag').innerHTML = `HAP BİLGİ #${P.no}`;
   $('tag').style.color = dark ? '#CBAA7F' : '#8A6A3E';
+  // sağ üstte sade logo: zemine göre açık/koyu sürüm; kapanışta alt bant logoyu taşıdığı için gizlenir
+  const wmSrc = dark ? 'logo-acik.png' : 'logo.png';
+  if (!$('wm').getAttribute('src').endsWith(wmSrc)) $('wm').setAttribute('src', wmSrc);
+  $('wm').style.opacity = s.type === 'outro' ? 0 : 0.92;
 
   // karakter: giriş, nefes alma, göz kırpma, konuşma
   const enter = s.type === 'hook' ? back((lt - 0.3) / 0.6) : 1;
