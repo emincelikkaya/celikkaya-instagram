@@ -15,7 +15,27 @@
 (() => {
   const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const F = '<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Libre+Franklin:wght@400;500;600&display=block" rel="stylesheet">';
-  const foot = (dark) => `<div style="position:absolute;left:0;right:0;bottom:0;height:132px;box-sizing:border-box;padding:0 88px;border-top:3px solid #CBAA7F;background:${dark ? '#0E0F0F' : '#151616'};display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:18px"><div style="width:60px;height:60px;box-sizing:border-box;border:3px solid #CBAA7F;display:flex;align-items:center;justify-content:center;font-family:Rajdhani;font-weight:700;font-size:32px;letter-spacing:-1px;color:#CBAA7F">ÇK</div><div style="font-family:Rajdhani;font-weight:600;font-size:34px;letter-spacing:8px"><span style="color:#F6F2EC">ÇELİK</span><span style="color:#CBAA7F">KAYA</span></div></div><div style="font-family:Rajdhani;font-weight:600;font-size:28px;letter-spacing:1px;color:#F6F2EC">@celikkayamulk</div></div>`;
+  // Gerçek logo: sayfa celikkayamulk.com üzerinde açıksa logodan koyu yazılar açık renge çevrilip kullanılır.
+  // Logo yüklenemezse yedek olarak yazı ile çizilmiş işaret kullanılır.
+  const textMark = '<div style="display:flex;align-items:center;gap:18px"><div style="width:60px;height:60px;box-sizing:border-box;border:3px solid #CBAA7F;display:flex;align-items:center;justify-content:center;font-family:Rajdhani;font-weight:700;font-size:32px;letter-spacing:-1px;color:#CBAA7F">ÇK</div><div style="font-family:Rajdhani;font-weight:600;font-size:34px;letter-spacing:8px"><span style="color:#F6F2EC">ÇELİK</span><span style="color:#CBAA7F">KAYA</span></div></div>';
+  const mark = () => (window.__logo ? `<img src="${window.__logo}" style="height:72px;width:auto;display:block" alt="Çelikkaya Mülk Yapı A.Ş.">` : textMark);
+  const foot = (dark) => `<div style="position:absolute;left:0;right:0;bottom:0;height:132px;box-sizing:border-box;padding:0 88px;border-top:3px solid #CBAA7F;background:${dark ? '#0E0F0F' : '#151616'};display:flex;align-items:center;justify-content:space-between">${mark()}<div style="font-family:Rajdhani;font-weight:600;font-size:28px;letter-spacing:1px;color:#F6F2EC">@celikkayamulk</div></div>`;
+  const loadLogo = async () => {
+    try {
+      const img = new Image();
+      img.src = 'https://www.celikkayamulk.com/wp-content/uploads/2025/03/celikkaya-logo.png';
+      await img.decode();
+      const h = 144, w = Math.round(img.naturalWidth * h / img.naturalHeight);
+      const c = document.createElement('canvas'); c.width = w; c.height = h;
+      const x = c.getContext('2d'); x.drawImage(img, 0, 0, w, h);
+      const d = x.getImageData(0, 0, w, h); const p = d.data;
+      for (let i = 0; i < p.length; i += 4) {
+        if (p[i + 3] > 0 && p[i] < 110 && p[i + 1] < 110 && p[i + 2] < 110) { p[i] = 246; p[i + 1] = 242; p[i + 2] = 236; }
+      }
+      x.putImageData(d, 0, 0);
+      return c.toDataURL('image/png');
+    } catch (e) { return null; }
+  };
   const tag = (no, n, total, light) => `<div style="display:flex;justify-content:space-between;align-items:center"><div style="font-family:Rajdhani;font-weight:700;font-size:30px;letter-spacing:6px;color:${light ? '#8A6A3E' : '#CBAA7F'}">HAP BİLGİ #${no}</div><div style="font-family:Rajdhani;font-weight:600;font-size:30px;letter-spacing:2px;color:${light ? '#5C5A56' : '#CFCAC2'}">${n} / ${total}</div></div>`;
   const cover = (P) => `<div style="position:relative;width:1080px;height:1350px;background:#151616;overflow:hidden;color:#F6F2EC;font-family:'Libre Franklin'">
 <div style="position:absolute;right:-140px;top:150px;width:560px;height:560px;border:6px solid #CBAA7F;opacity:.22"></div>
@@ -36,6 +56,7 @@
 <div style="margin-top:28px;font-size:22px;line-height:1.4;color:#A8A49C">${esc(P.last.note || '')}</div></div>${foot(true)}</div>`;
   };
   window.__build = async (P) => {
+    if (!window.__logo && /celikkayamulk\.com$/.test(location.hostname)) window.__logo = await loadLogo();
     const total = P.items.length + 2;
     window.__slides = [cover(P), ...P.items.map((it, i) => item(P, i + 2, total, String(i + 1).padStart(2, '0'), it)), last(P, total)];
     document.open();
@@ -45,7 +66,7 @@
     const g = 'ÇşğİÖüıâ';
     await Promise.all(['400', '500', '600'].map((w) => document.fonts.load(`${w} 20px "Libre Franklin"`, g)));
     await Promise.all(['600', '700'].map((w) => document.fonts.load(`${w} 20px Rajdhani`, g)));
-    return { slides: window.__slides.length, fonts: [...document.fonts].filter((f) => f.status === 'loaded').length };
+    return { slides: window.__slides.length, fonts: [...document.fonts].filter((f) => f.status === 'loaded').length, logo: !!window.__logo };
   };
   window.__show = async (i, t) => {
     const x = (t % 2) * 540, y = Math.floor(t / 2) * 675;
