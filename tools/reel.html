@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Hap bilgi reels</title>
+<style>
+@font-face { font-family: Rajdhani; font-weight: 600; src: url("fonts/Rajdhani-SemiBold.ttf"); }
+@font-face { font-family: Rajdhani; font-weight: 700; src: url("fonts/Rajdhani-Bold.ttf"); }
+@font-face { font-family: "Libre Franklin"; font-weight: 100 900; src: url("fonts/LibreFranklin-VF.ttf"); }
+html, body { margin: 0; background: #151616; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Libre Franklin"; }
+.abs { position: absolute; }
+.r { font-family: Rajdhani; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg" class="abs" style="inset:0"></div>
+  <div id="tape" class="abs" style="left:-200px;right:-200px;height:90px;top:1720px;transform:rotate(-4deg)"></div>
+  <div id="progress" class="abs" style="left:60px;right:60px;top:110px;height:10px;display:flex;gap:10px"></div>
+  <div id="tag" class="abs r" style="left:60px;top:150px;font-weight:700;font-size:38px;letter-spacing:8px"></div>
+  <div id="content" class="abs" style="left:80px;right:80px;top:300px"></div>
+  <svg id="char" class="abs" width="440" height="640" viewBox="0 0 440 640" style="left:40px;top:1080px;overflow:visible">
+    <g id="body">
+      <!-- gövde: antrasit iş tulumu, altın reflektör şerit -->
+      <path d="M95 420 Q220 360 345 420 L370 640 L70 640 Z" fill="#2B2D2D"/>
+      <rect x="92" y="500" width="256" height="22" fill="#CBAA7F"/>
+      <rect x="196" y="440" width="48" height="48" rx="6" fill="#151616" stroke="#CBAA7F" stroke-width="4"/>
+      <text x="220" y="474" text-anchor="middle" font-family="Rajdhani" font-weight="700" font-size="28" fill="#CBAA7F">ÇK</text>
+      <!-- sol kol (sabit) -->
+      <path d="M105 430 Q60 500 80 590" stroke="#2B2D2D" stroke-width="46" fill="none" stroke-linecap="round"/>
+      <circle cx="80" cy="592" r="26" fill="#F2C9A0"/>
+      <!-- sağ kol (işaret eder) -->
+      <g id="arm" style="transform-origin:330px 440px">
+        <path d="M330 440 Q400 380 420 300" stroke="#2B2D2D" stroke-width="46" fill="none" stroke-linecap="round"/>
+        <circle cx="422" cy="292" r="28" fill="#F2C9A0"/>
+        <rect x="414" y="236" width="16" height="50" rx="8" fill="#F2C9A0"/>
+      </g>
+      <!-- kafa -->
+      <g id="head" style="transform-origin:220px 300px">
+        <ellipse cx="220" cy="270" rx="120" ry="130" fill="#F2C9A0"/>
+        <ellipse cx="102" cy="280" rx="18" ry="26" fill="#E8B88C"/>
+        <ellipse cx="338" cy="280" rx="18" ry="26" fill="#E8B88C"/>
+        <!-- kaşlar -->
+        <rect id="browL" x="148" y="222" width="44" height="10" rx="5" fill="#3A2A1E"/>
+        <rect id="browR" x="248" y="222" width="44" height="10" rx="5" fill="#3A2A1E"/>
+        <!-- gözler -->
+        <g id="eyes">
+          <ellipse cx="170" cy="262" rx="14" ry="18" fill="#151616"/>
+          <ellipse cx="270" cy="262" rx="14" ry="18" fill="#151616"/>
+          <circle cx="175" cy="255" r="5" fill="#fff"/>
+          <circle cx="275" cy="255" r="5" fill="#fff"/>
+        </g>
+        <!-- bıyık ve ağız -->
+        <path d="M168 318 Q220 296 272 318 Q244 332 220 322 Q196 332 168 318 Z" fill="#3A2A1E"/>
+        <ellipse id="mouth" cx="220" cy="345" rx="26" ry="6" fill="#7A2E22"/>
+        <!-- baret -->
+        <path d="M92 222 Q100 110 220 104 Q340 110 348 222 Z" fill="#CBAA7F"/>
+        <rect x="70" y="212" width="300" height="26" rx="13" fill="#B8935F"/>
+        <rect x="206" y="104" width="28" height="112" rx="10" fill="#B8935F"/>
+      </g>
+    </g>
+  </svg>
+  <div id="bubble" class="abs r" style="left:440px;top:1250px;max-width:520px;background:#fff;color:#151616;border-radius:28px;padding:22px 30px;font-weight:700;font-size:44px;line-height:1.05;transform-origin:0% 100%"></div>
+  <div id="foot" class="abs" style="left:0;right:0;bottom:0;height:0"></div>
+</div>
+<script>
+// Zaman tabanlı, belirlenimci çizim: render(t) her karede çağrılır (t saniye).
+const ease = (x) => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
+const back = (x) => { x = Math.min(Math.max(x, 0), 1); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const $ = (id) => document.getElementById(id);
+let P, S;
+
+window.setup = (post) => {
+  P = post;
+  const HOOK = 3.0, ITEM = 4.2, OUT = 4.8;
+  S = [{ type: 'hook', start: 0, dur: HOOK }];
+  P.items.forEach((it, i) => S.push({ type: 'item', i, start: HOOK + i * ITEM, dur: ITEM }));
+  S.push({ type: 'outro', start: HOOK + P.items.length * ITEM, dur: OUT });
+  window.DURATION = HOOK + P.items.length * ITEM + OUT;
+  // ses efekti zamanları (pop): her sahne başı
+  window.CUES = S.map((s) => +(s.start + 0.05).toFixed(2));
+  $('progress').innerHTML = P.items.map((_, i) => `<div id="pg${i}" style="flex:1;background:rgba(255,255,255,.25);border-radius:5px;overflow:hidden"><div style="height:100%;width:0;background:#CBAA7F"></div></div>`).join('');
+  return { duration: window.DURATION, cues: window.CUES };
+};
+
+const words = (text, t, perWord, style) => esc(text).split(' ').map((w, k) => {
+  const a = ease((t - k * perWord) / 0.25);
+  return `<span style="display:inline-block;opacity:${a};transform:translateY(${(1 - a) * 40}px);${style || ''}">${w}</span>`;
+}).join(' ');
+
+window.render = (t) => {
+  const s = S.find((x) => t >= x.start && t < x.start + x.dur) || S[S.length - 1];
+  const lt = t - s.start;
+  const dark = s.type !== 'item';
+  $('bg').style.background = dark ? '#151616' : '#F6F2EC';
+  // inşaat şeridi
+  $('tape').style.background = `repeating-linear-gradient(90deg, #CBAA7F 0 60px, #151616 60px 120px)`;
+  $('tape').style.backgroundPosition = `${-t * 120}px 0`;
+  $('tape').style.opacity = s.type === 'item' ? 0 : 1;
+  // ilerleme çubuğu (izleyiciyi sona kadar tutar)
+  P.items.forEach((_, i) => {
+    const it = S[i + 1];
+    const f = Math.min(Math.max((t - it.start) / it.dur, 0), 1);
+    $('pg' + i).firstChild.style.width = (f * 100) + '%';
+  });
+  $('progress').style.opacity = s.type === 'hook' ? 0 : 1;
+  $('tag').innerHTML = `HAP BİLGİ #${P.no}`;
+  $('tag').style.color = dark ? '#CBAA7F' : '#8A6A3E';
+
+  // karakter: giriş, nefes alma, göz kırpma, konuşma
+  const enter = s.type === 'hook' ? back((lt - 0.3) / 0.6) : 1;
+  const bob = Math.sin(t * 3.2) * 8;
+  $('char').style.transform = `translateY(${(1 - enter) * 700 + bob}px)`;
+  const blink = (t % 3.1) < 0.12 ? 0.1 : 1;
+  $('eyes').style.transformOrigin = '220px 262px';
+  $('eyes').style.transform = `scaleY(${blink})`;
+  const talking = (s.type === 'hook' && lt > 0.8 && lt < 2.8) || (s.type === 'item' && lt > 0.3 && lt < 2.4) || (s.type === 'outro' && lt > 0.4 && lt < 2.6);
+  $('mouth').setAttribute('ry', talking ? 6 + Math.abs(Math.sin(t * 18)) * 18 : 6);
+  const surprised = s.type === 'hook' && lt > 0.6 && lt < 1.6;
+  $('browL').setAttribute('y', surprised ? 204 : 222);
+  $('browR').setAttribute('y', surprised ? 204 : 222);
+  $('head').style.transform = `rotate(${Math.sin(t * 2) * 3 + (talking ? Math.sin(t * 9) * 2 : 0)}deg)`;
+  const point = s.type === 'item' ? -10 + Math.sin(lt * 6) * 4 : (s.type === 'hook' ? Math.sin(t * 10) * 18 : 20 * Math.sin(t * 8));
+  $('arm').style.transform = `rotate(${point}deg)`;
+
+  // konuşma balonu
+  let bubble = '';
+  if (s.type === 'hook') bubble = 'Bunu bilmeyen kalmasın!';
+  if (s.type === 'item') bubble = ['Buna dikkat!', 'Şuna bakın:', 'Önemli!', 'Kaçırmayın:', 'Son olarak:'][s.i % 5];
+  if (s.type === 'outro') bubble = 'Kaydedin, lazım olacak!';
+  const bIn = back((lt - (s.type === 'hook' ? 0.9 : 0.15)) / 0.35);
+  $('bubble').innerHTML = esc(bubble);
+  $('bubble').style.transform = `scale(${Math.max(bIn, 0)})`;
+  $('bubble').style.opacity = bIn > 0.02 ? 1 : 0;
+
+  // içerik
+  let html = '';
+  if (s.type === 'hook') {
+    const pop = back(lt / 0.45);
+    const shake = lt > 0.45 && lt < 0.9 ? Math.sin(lt * 80) * 8 : 0;
+    html = `<div class="r" style="display:inline-block;background:#CBAA7F;color:#151616;font-weight:700;font-size:96px;padding:6px 28px;letter-spacing:6px;transform:scale(${pop}) translateX(${shake}px);transform-origin:left center">DİKKAT!</div>
+      <div class="r" style="margin-top:60px;font-weight:700;font-size:118px;line-height:.98;letter-spacing:-2px;color:#F6F2EC">${words(P.cover.title, lt - 0.6, 0.12)}</div>
+      <div class="r" style="margin-top:40px;font-weight:600;font-size:60px;color:#CBAA7F;opacity:${ease((lt - 1.8) / 0.4)}">${esc(P.cover.subtitle)}</div>`;
+  } else if (s.type === 'item') {
+    const it = P.items[s.i];
+    const nIn = back(lt / 0.4);
+    html = `<div class="r" style="font-weight:700;font-size:300px;line-height:.8;color:#CBAA7F;transform:translateX(${(1 - nIn) * -400}px)">${String(s.i + 1).padStart(2, '0')}</div>
+      <div class="r" style="margin-top:50px;font-weight:700;font-size:100px;line-height:1;letter-spacing:-1px;color:#151616">${words(it.h, lt - 0.25, 0.1)}</div>
+      <div style="margin-top:46px;width:120px;height:6px;background:#151616;transform:scaleX(${ease((lt - 0.8) / 0.3)});transform-origin:left"></div>
+      <div style="margin-top:46px;font-size:46px;line-height:1.4;color:#3A3936;opacity:${ease((lt - 1.0) / 0.5)}">${esc(it.p)}</div>`;
+  } else {
+    let title = esc(P.last.title);
+    if (P.last.accent) title = title.replace(esc(P.last.accent), `<span style="color:#CBAA7F">${esc(P.last.accent)}</span>`);
+    const pulse = 1 + Math.max(0, Math.sin((lt - 2) * 6)) * 0.06 * (lt > 2 ? 1 : 0);
+    html = `<div class="r" style="font-weight:700;font-size:96px;line-height:1;letter-spacing:-1px;color:#F6F2EC;opacity:${ease(lt / 0.4)};transform:translateY(${(1 - ease(lt / 0.4)) * 40}px)">${title}</div>
+      <div style="margin-top:56px;display:flex;flex-direction:column;gap:26px">${(P.last.bullets || []).map((b, k) => `<div style="display:flex;gap:22px;font-size:40px;line-height:1.3;color:#F6F2EC;opacity:${ease((lt - 0.8 - k * 0.4) / 0.4)}"><div style="flex:none;width:16px;height:16px;margin-top:16px;background:#CBAA7F"></div><div>${esc(b)}</div></div>`).join('')}</div>
+      <div class="r" style="margin-top:64px;display:inline-block;background:#CBAA7F;color:#151616;padding:22px 36px;font-weight:700;font-size:52px;transform:scale(${pulse * ease((lt - 1.8) / 0.3)});transform-origin:left center">KAYDET + TAKİP ET</div>
+      <div style="margin-top:30px;font-size:28px;color:#A8A49C;opacity:${ease((lt - 2.2) / 0.4)}">${esc(P.last.note || '')}</div>`;
+  }
+  $('content').innerHTML = html;
+
+  // alt bant: marka
+  const showFoot = s.type === 'outro';
+  $('foot').style.height = showFoot ? '0px' : '0px';
+  $('foot').innerHTML = showFoot ? `<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:#0E0F0F;border-top:4px solid #CBAA7F;display:flex;align-items:center;justify-content:space-between;padding:0 80px;opacity:${ease((lt - 1) / 0.4)}"><div style="display:flex;align-items:center;gap:20px"><div class="r" style="width:72px;height:72px;box-sizing:border-box;border:4px solid #CBAA7F;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:38px;color:#CBAA7F">ÇK</div><div class="r" style="font-weight:600;font-size:44px;letter-spacing:10px"><span style="color:#F6F2EC">ÇELİK</span><span style="color:#CBAA7F">KAYA</span></div></div><div class="r" style="font-weight:600;font-size:36px;color:#F6F2EC">@celikkayamulk</div></div>` : '';
+  // outroda karakter alt bandın üstünde kalsın
+  return s.type;
+};
+</script>
+</body>
+</html>
