@@ -2,18 +2,40 @@
   "no": 0,
   "label": "MALİK PORTALI",
   "konu": "Çelikkaya Malik Portalı tanıtımı",
-  "kaynaklar": ["https://www.celikkayamulk.com/malik-portali/"],
-  "cover": {"title": "Binanız yıkıldı. Şimdi ne oluyor?", "subtitle": "Dönüşümü telefonunuzdan takip edin"},
+  "kaynaklar": [
+    "https://www.celikkayamulk.com/malik-portali/"
+  ],
+  "cover": {
+    "title": "Binanız yıkıldı. Şimdi ne oluyor?",
+    "subtitle": "Dönüşümü telefonunuzdan takip edin"
+  },
   "items": [
-    {"h": "“İnşaat ne aşamada?”", "p": "Kat maliklerinin en sık sorusu bu. Cevabı aramak zorunda kalmayın."},
-    {"h": "Yalnızca kendi daireniz", "p": "Çelikkaya Malik Portalı'nda süreci 5 aşama ve 21 adımda görürsünüz."},
-    {"h": "Şantiyeden doğrudan", "p": "Fotoğraflı gelişme bildirimleri, genel ilerleme yüzdesi ve sıradaki adım."},
-    {"h": "Belgeleriniz tek yerde", "p": "İmzalı sözleşme, ödeme planı ve geçmişi, belediye onayı, çizimler, teslim belgeleri."}
+    {
+      "h": "“İnşaat ne aşamada?”",
+      "p": "Kat maliklerinin en sık sorusu bu. Cevabı aramak zorunda kalmayın."
+    },
+    {
+      "h": "Yalnızca kendi daireniz",
+      "p": "Çelikkaya Malik Portalı'nda süreci 5 aşama ve 21 adımda görürsünüz."
+    },
+    {
+      "h": "Şantiyeden doğrudan",
+      "p": "Fotoğraflı gelişme bildirimleri, genel ilerleme yüzdesi ve sıradaki adım."
+    },
+    {
+      "h": "Belgeleriniz tek yerde",
+      "p": "İmzalı sözleşme, ödeme planı ve geçmişi, belediye onayı, çizimler, teslim belgeleri."
+    }
   ],
   "last": {
     "title": "Şeffaf dönüşüm, cebinizde.",
     "accent": "cebinizde",
-    "bullets": ["portal.celikkayamulk.com", "Projelerimizdeki her malike açık."],
+    "bullets": [
+      "portal.celikkayamulk.com",
+      "Projelerimizdeki her malike açık."
+    ],
     "note": "Çelikkaya Mülk Yapı · 1978'den beri · Bahçelievler"
-  }
+  },
+  "yayin": "2026-11-04T17:30:00+03:00",
+  "metricool_id": 406950335
 }
