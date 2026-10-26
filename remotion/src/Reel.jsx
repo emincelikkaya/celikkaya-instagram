@@ -183,18 +183,19 @@ export const HapBilgiReel = (P) => {
       </>
     );
   } else {
+    const tight = (P.last.bullets || []).length >= 3;
     const pulse = lt > 2 ? 1 + Math.max(0, Math.sin((lt - 2) * 6)) * 0.06 : 1;
     content = (
       <>
         <div style={{ ...R, fontWeight: 700, fontSize: 96, lineHeight: 1, letterSpacing: -1, color: CREAM, opacity: ease(lt / 0.4), transform: `translateY(${(1 - ease(lt / 0.4)) * 40}px)` }}><Accent text={P.last.title} accent={P.last.accent} /></div>
-        <div style={{ marginTop: 56, display: 'flex', flexDirection: 'column', gap: 26 }}>
+        <div style={{ marginTop: tight ? 36 : 56, display: 'flex', flexDirection: 'column', gap: tight ? 18 : 26 }}>
           {(P.last.bullets || []).map((b, k) => (
-            <div key={k} style={{ display: 'flex', gap: 22, fontSize: 40, lineHeight: 1.3, color: CREAM, opacity: ease((lt - 0.8 - k * 0.4) / 0.3), transform: `translateX(${(1 - ease((lt - 0.8 - k * 0.4) / 0.4)) * 60}px)` }}>
+            <div key={k} style={{ display: 'flex', gap: 22, fontSize: tight ? 36 : 40, lineHeight: 1.3, color: CREAM, opacity: ease((lt - 0.8 - k * 0.4) / 0.3), transform: `translateX(${(1 - ease((lt - 0.8 - k * 0.4) / 0.4)) * 60}px)` }}>
               <Check p={(lt - 0.8 - k * 0.4) / 0.6} /><div>{b}</div>
             </div>
           ))}
         </div>
-        <div style={{ ...R, marginTop: 64, display: 'inline-block', background: GOLD, color: INK, padding: '22px 36px', fontWeight: 700, fontSize: 52, transform: `scale(${pulse * ease((lt - 1.8) / 0.3)})`, transformOrigin: 'left center' }}>KAYDET + TAKİP ET</div>
+        <div style={{ ...R, marginTop: tight ? 40 : 64, display: 'inline-block', background: GOLD, color: INK, padding: '22px 36px', fontWeight: 700, fontSize: 52, transform: `scale(${pulse * ease((lt - 1.8) / 0.3)})`, transformOrigin: 'left center' }}>KAYDET + TAKİP ET</div>
         <div style={{ marginTop: 30, fontSize: 28, color: '#A8A49C', opacity: ease((lt - 2.2) / 0.4) }}>{P.last.note || ''}</div>
       </>
     );
