@@ -27,6 +27,22 @@ def main():
             if 0 <= s + k < n:
                 buf[s + k] += fn(k / rate)
 
+    # geçiş "vuuş" sesi: sahne sınırlarından 0.3 sn önce başlayan, yükselip alçalan gürültü
+    seed = [12345]
+
+    def noise():
+        seed[0] = (1103515245 * seed[0] + 12345) % 2147483648
+        return seed[0] / 1073741824.0 - 1.0
+
+    prev = [0.0]
+
+    def whoosh(x):
+        env = math.sin(math.pi * min(x / 0.55, 1.0)) ** 2
+        prev[0] = 0.85 * prev[0] + 0.15 * noise()  # yumuşatılmış gürültü
+        return 0.9 * env * prev[0]
+
+    for c in cues[1:]:
+        add(c - 0.05 - 0.3, 0.55, whoosh)
     for c in cues:
         add(c, 0.14, lambda x: 0.55 * math.sin(2 * math.pi * (900 - 2600 * x) * x) * math.exp(-x * 30))
     beat, t = 60 / 112, 0.0

@@ -43,6 +43,55 @@ const Words = ({ text, t, per }) => (
   </>
 );
 
+// Kelime kelime vurgulanan altyazı (karaoke): okunan kelime altın zeminli, okunmuşlar koyu, sıradakiler soluk.
+const Karaoke = ({ text, t, per, color, dim }) => {
+  const words = String(text).split(' ');
+  const cur = Math.floor(t / per);
+  return (
+    <>
+      {words.map((w, k) => {
+        const active = k === cur;
+        const seen = k < cur;
+        const pop = active ? back((t - k * per) / 0.18) : 1;
+        return (
+          <span key={k} style={{
+            display: 'inline-block', marginRight: '0.28em', marginBottom: '0.12em', padding: '0 0.12em', borderRadius: 8,
+            background: active ? GOLD : 'transparent', color: active ? INK : color,
+            opacity: t < 0 ? 0 : (seen || active ? 1 : dim), transform: `scale(${active ? 0.9 + 0.1 * pop : 1})`,
+          }}>{w}</span>
+        );
+      })}
+    </>
+  );
+};
+
+// Sahne geçişi: altın-antrasit eğik panel ekranı süpürür; sahne değişimi panelin arkasında olur.
+const Wipe = ({ t, boundaries }) => {
+  const W = 0.32;
+  const b = boundaries.find((x) => Math.abs(t - x) < W);
+  if (b === undefined) return null;
+  const p = (t - b + W) / (2 * W); // 0..1
+  const x = -160 + p * 320; // yüzde
+  return (
+    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+      <div style={{ position: 'absolute', top: -200, bottom: -200, left: `${x}%`, width: '140%', transform: 'skewX(-14deg)', display: 'flex' }}>
+        <div style={{ width: 90, background: INK }} />
+        <div style={{ flex: 1, background: GOLD }} />
+        <div style={{ width: 90, background: INK }} />
+      </div>
+    </div>
+  );
+};
+
+// Kapanışta madde işaretleri: çizilerek beliren onay işareti.
+const Check = ({ p }) => (
+  <svg width="40" height="40" viewBox="0 0 40 40" style={{ flex: 'none', marginTop: 4 }}>
+    <circle cx="20" cy="20" r="18" fill={GOLD} opacity={ease(p * 2)} />
+    <path d="M11 21 L17 27 L29 14" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"
+      strokeDasharray="30" strokeDashoffset={30 * (1 - ease((p - 0.3) / 0.7))} />
+  </svg>
+);
+
 const Accent = ({ text, accent }) => {
   if (!accent || !text.includes(accent)) return <>{text}</>;
   const [a, b] = text.split(accent);
@@ -123,10 +172,14 @@ export const HapBilgiReel = (P) => {
     const nIn = back(lt / 0.4);
     content = (
       <>
-        <div style={{ ...R, fontWeight: 700, fontSize: 300, lineHeight: 0.8, color: GOLD, transform: `translateX(${(1 - nIn) * -400}px)` }}>{String(s.i + 1).padStart(2, '0')}</div>
+        <div style={{ ...R, fontWeight: 700, fontSize: 300, lineHeight: 0.8, color: GOLD, transformOrigin: 'left bottom', transform: `translateX(${(1 - nIn) * -400}px) scale(${1 + 0.25 * Math.max(0, 1 - lt / 0.5)})` }}>{String(s.i + 1).padStart(2, '0')}</div>
         <div style={{ ...R, marginTop: 50, fontWeight: 700, fontSize: 100, lineHeight: 1, letterSpacing: -1, color: INK }}><Words text={it.h} t={lt - 0.25} per={0.1} /></div>
         <div style={{ marginTop: 46, width: 120, height: 6, background: INK, transform: `scaleX(${ease((lt - 0.8) / 0.3)})`, transformOrigin: 'left' }} />
-        <div style={{ marginTop: 46, fontSize: 46, lineHeight: 1.4, color: '#3A3936', opacity: ease((lt - 1.0) / 0.5) }}>{it.p}</div>
+        {(() => {
+          const n = String(it.p).split(' ').length;
+          const per = Math.min(0.24, 2.7 / Math.max(n, 1));
+          return <div style={{ marginTop: 40, fontSize: 48, lineHeight: 1.35, fontWeight: 500 }}><Karaoke text={it.p} t={lt - 1.0} per={per} color="#2A2A28" dim={0.22} /></div>;
+        })()}
       </>
     );
   } else {
@@ -136,8 +189,8 @@ export const HapBilgiReel = (P) => {
         <div style={{ ...R, fontWeight: 700, fontSize: 96, lineHeight: 1, letterSpacing: -1, color: CREAM, opacity: ease(lt / 0.4), transform: `translateY(${(1 - ease(lt / 0.4)) * 40}px)` }}><Accent text={P.last.title} accent={P.last.accent} /></div>
         <div style={{ marginTop: 56, display: 'flex', flexDirection: 'column', gap: 26 }}>
           {(P.last.bullets || []).map((b, k) => (
-            <div key={k} style={{ display: 'flex', gap: 22, fontSize: 40, lineHeight: 1.3, color: CREAM, opacity: ease((lt - 0.8 - k * 0.4) / 0.4) }}>
-              <div style={{ flex: 'none', width: 16, height: 16, marginTop: 16, background: GOLD }} /><div>{b}</div>
+            <div key={k} style={{ display: 'flex', gap: 22, fontSize: 40, lineHeight: 1.3, color: CREAM, opacity: ease((lt - 0.8 - k * 0.4) / 0.3), transform: `translateX(${(1 - ease((lt - 0.8 - k * 0.4) / 0.4)) * 60}px)` }}>
+              <Check p={(lt - 0.8 - k * 0.4) / 0.6} /><div>{b}</div>
             </div>
           ))}
         </div>
@@ -171,6 +224,7 @@ export const HapBilgiReel = (P) => {
       <div style={{ position: 'absolute', left: 80, right: 80, top: 300 }}>{content}</div>
       <Character t={t} s={s} lt={lt} />
       <div style={{ ...R, position: 'absolute', left: 440, top: 1250, maxWidth: 520, background: '#fff', color: INK, borderRadius: 28, padding: '22px 30px', fontWeight: 700, fontSize: 44, lineHeight: 1.05, transformOrigin: '0% 100%', transform: `scale(${Math.max(bIn, 0)})`, opacity: bIn > 0.02 ? 1 : 0 }}>{bubble}</div>
+      <Wipe t={t} boundaries={scenes.slice(1).map((x) => x.start)} />
       {s.type === 'outro' && (
         <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 150, background: '#0E0F0F', borderTop: `4px solid ${GOLD}`, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 80px', opacity: ease((lt - 1) / 0.4) }}>
           <Img src={staticFile('logo-acik.png')} style={{ height: 96 }} />
