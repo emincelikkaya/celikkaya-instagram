@@ -41,6 +41,7 @@
     document.open();
     document.write('<!doctype html><html><head><meta charset="utf-8">' + F + '<style>html,body{margin:0;overflow:hidden;background:#000}</style></head><body></body></html>');
     document.close();
+    await new Promise((r) => { const l = document.querySelector('link'); if (l.sheet) r(); else { l.onload = r; l.onerror = r; } });
     const g = 'ÇşğİÖüıâ';
     await Promise.all(['400', '500', '600'].map((w) => document.fonts.load(`${w} 20px "Libre Franklin"`, g)));
     await Promise.all(['600', '700'].map((w) => document.fonts.load(`${w} 20px Rajdhani`, g)));
