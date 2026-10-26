@@ -56,13 +56,19 @@
 <div style="margin-top:28px;font-size:22px;line-height:1.4;color:#A8A49C">${esc(P.last.note || '')}</div></div>${foot(true)}</div>`;
   };
   window.__build = async (P) => {
-    if (!window.__logo && /celikkayamulk\.com$/.test(location.hostname)) window.__logo = await loadLogo();
+    // Yerel mod (bulut çalışma alanı, tools/carousel.html): fontlar ve logo depodaki dosyalardan gelir.
+    const local = location.protocol === 'file:';
+    if (local) window.__logo = 'logo-acik.png';
+    else if (!window.__logo && /celikkayamulk\.com$/.test(location.hostname)) window.__logo = await loadLogo();
     const total = P.items.length + 2;
     window.__slides = [cover(P), ...P.items.map((it, i) => item(P, i + 2, total, String(i + 1).padStart(2, '0'), it)), last(P, total)];
+    const fontsHead = local
+      ? '<style>@font-face{font-family:Rajdhani;font-weight:600;src:url("fonts/Rajdhani-SemiBold.ttf")}@font-face{font-family:Rajdhani;font-weight:700;src:url("fonts/Rajdhani-Bold.ttf")}@font-face{font-family:"Libre Franklin";font-weight:100 900;src:url("fonts/LibreFranklin-VF.ttf")}</style>'
+      : F;
     document.open();
-    document.write('<!doctype html><html><head><meta charset="utf-8">' + F + '<style>html,body{margin:0;overflow:hidden;background:#000}</style></head><body></body></html>');
+    document.write('<!doctype html><html><head><meta charset="utf-8">' + fontsHead + '<style>html,body{margin:0;overflow:hidden;background:#000}</style></head><body></body></html>');
     document.close();
-    await new Promise((r) => { const l = document.querySelector('link'); if (l.sheet) r(); else { l.onload = r; l.onerror = r; } });
+    if (!local) await new Promise((r) => { const l = document.querySelector('link'); if (l.sheet) r(); else { l.onload = r; l.onerror = r; } });
     const g = 'ÇşğİÖüıâ';
     await Promise.all(['400', '500', '600'].map((w) => document.fonts.load(`${w} 20px "Libre Franklin"`, g)));
     await Promise.all(['600', '700'].map((w) => document.fonts.load(`${w} 20px Rajdhani`, g)));
@@ -73,6 +79,11 @@
     document.body.innerHTML = `<div style="position:fixed;left:${-x}px;top:${-y}px">${window.__slides[i]}</div>`;
     await new Promise((r) => setTimeout(r, 300));
     return `${i}-${t}`;
+  };
+  window.__showFull = async (i) => {
+    document.body.innerHTML = window.__slides[i];
+    await Promise.all([...document.images].map((im) => (im.complete ? 0 : im.decode().catch(() => 0))));
+    return i;
   };
   return 'slides.js hazır';
 })();
