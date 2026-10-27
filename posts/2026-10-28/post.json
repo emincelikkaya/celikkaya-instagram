@@ -1,0 +1,44 @@
+{
+  "no": 3,
+  "konu": "Riskli yapı raporuna itiraz hakkı ve süresi",
+  "yayin": "2026-10-28T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Riskli yapı raporuna nasıl itiraz edilir?",
+    "subtitle": "Süre ne zaman başlar, kim karar verir?"
+  },
+  "items": [
+    {
+      "h": "Kim itiraz edebilir?",
+      "p": "Yapı malikleri veya kanuni temsilcileri. Kanun itiraz hakkını doğrudan maliklere tanır."
+    },
+    {
+      "h": "İtiraz süresi ne kadar?",
+      "p": "Riskli yapı tespitine karşı itiraz süresi 15 gündür. Tarihleri baştan not edin."
+    },
+    {
+      "h": "Süre ne zaman başlar?",
+      "p": "Tutanak muhtarlıkta 15 gün ilan edilir. İlanın son günü tespit size tebliğ edilmiş sayılır."
+    },
+    {
+      "h": "İtirazı kim inceler?",
+      "p": "4 üniversite öğretim üyesi ve 3 Bakanlık/Başkanlık görevlisinden oluşan teknik heyet inceleyip karara bağlar."
+    },
+    {
+      "h": "Başka firmadan ikinci rapor olur mu?",
+      "p": "Kanun, daha önce tespit yapılmış yapıya ikinci kez tespit yapan lisanslı kuruluşa yaptırım öngörür. Bu yüzden itiraz süresini kaçırmayın."
+    }
+  ],
+  "last": {
+    "title": "Heyet kararından sonra dava yolu açık.",
+    "accent": "dava yolu",
+    "bullets": [
+      "Kanundaki idari işlemlere karşı tebliğden itibaren 30 gün içinde dava açılabilir.",
+      "Riskli yapılar en geç 10 iş günü içinde tapu müdürlüğüne bildirilir.",
+      "Başkanlığın internet sitesinde de 15 gün ilan edilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun, md. 3 ve 6/9"
+  }
+}
