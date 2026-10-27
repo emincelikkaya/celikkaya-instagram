@@ -6,7 +6,7 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | --- | --- | --- |
 | 1 | Binanız kentsel dönüşüme girebilir mi? 5 soruda test | #1 · 2026-10-26 (yayınlandı) |
 | 2 | Riskli yapı tespiti nasıl yapılır, kime başvurulur? | #2 · 2026-10-27 |
-| 3 | Riskli yapı raporuna itiraz hakkı ve süresi | |
+| 3 | Riskli yapı raporuna itiraz hakkı ve süresi | #3 · 2026-10-28 |
 | 4 | 6306 sayılı kanunda karar çoğunluğu nasıl hesaplanır? | |
 | 5 | Anlaşmaya katılmayan malikin hissesine ne olur? | |
 | 6 | Kira yardımı: kimler alır, nasıl başvurulur? | |
