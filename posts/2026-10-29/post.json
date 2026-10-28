@@ -1,0 +1,44 @@
+{
+  "no": 4,
+  "konu": "6306 sayılı kanunda karar çoğunluğu nasıl hesaplanır?",
+  "yayin": "2026-10-29T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Dönüşümde karar çoğunluğu nasıl hesaplanır?",
+    "subtitle": "Kişi sayısı mı, arsa payı mı?"
+  },
+  "items": [
+    {
+      "h": "Kişi sayısı değil, arsa payı",
+      "p": "Oylar kişi başına sayılmaz. Her malik, tapudaki hissesi oranında karara katılır."
+    },
+    {
+      "h": "Salt çoğunluk ne demek?",
+      "p": "Arsa paylarının yarısından fazlasına sahip maliklerin onayı gerekir. Tam yarı yeterli değildir."
+    },
+    {
+      "h": "Hangi kararlar böyle alınır?",
+      "p": "Yeniden bina yaptırılması, kat karşılığı veya hasılat paylaşımı, payların satışı, parsellerin birleştirilmesi gibi kararlar."
+    },
+    {
+      "h": "İzin ve ruhsatlar da dahil",
+      "p": "Yıkım ve yapıma ilişkin izin, ruhsat ve tapu işlemleri de bu çoğunluk kararına dayanarak yürütülür."
+    },
+    {
+      "h": "Karar nasıl belgelenir?",
+      "p": "İdareye anlaşan maliklerin imzaladığı karar tutanağı ya da vekâletname veya sözleşme örnekleri sunulabilir."
+    }
+  ],
+  "last": {
+    "title": "Katılmayan maliklere 15 gün tanınır.",
+    "accent": "15 gün",
+    "bullets": [
+      "Karar ve teklif, katılmayanlara noter veya 15 günlük muhtarlık ilanıyla bildirilir.",
+      "15 gün içinde kabul edilmezse arsa payı satılabilir.",
+      "Satış rayiç değerin altında olamaz; anlaşan paydaşlara açık artırmayla yapılır."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun, md. 6/1"
+  }
+}
