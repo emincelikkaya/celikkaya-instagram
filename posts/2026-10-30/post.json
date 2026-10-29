@@ -1,0 +1,44 @@
+{
+  "no": 5,
+  "konu": "Anlaşmaya katılmayan malikin hissesine ne olur?",
+  "yayin": "2026-10-30T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Anlaşmaya katılmayan malikin hissesine ne olur?",
+    "subtitle": "Teklif, süre, değer ve satış süreci"
+  },
+  "items": [
+    {
+      "h": "Önce teklif bildirilir",
+      "p": "Karar ve anlaşma şartları, katılmayan maliklere noter aracılığıyla veya muhtarlıkta 15 gün ilanla bildirilir."
+    },
+    {
+      "h": "15 günlük süre başlar",
+      "p": "Bildirimden itibaren 15 gün içinde teklif incelenmez veya kabul edilmezse arsa payı Kanun kapsamında satılabilir."
+    },
+    {
+      "h": "Değeri Başkanlık tespit ettirir",
+      "p": "Arsa payının rayiç değeri Başkanlıkça tespit ettirilir. Satış bu değerin altında yapılamaz."
+    },
+    {
+      "h": "Önce anlaşan paydaşlara satılır",
+      "p": "Satış, anlaşma sağlayan diğer paydaşlara açık artırma usulüyle yapılır."
+    },
+    {
+      "h": "Alıcı çıkmazsa ne olur?",
+      "p": "Riskli yapılarda satış tekrarlanır. Anlaşmaya uymayı kabul eden üçüncü kişilere de satılabilir."
+    }
+  ],
+  "last": {
+    "title": "İpotek ve haciz satış bedeline geçer.",
+    "accent": "satış bedeline",
+    "bullets": [
+      "İpotek ve haciz gibi haklar satış bedeli üzerinde devam eder.",
+      "Tebligatlar e-Devlet ve 15 günlük muhtarlık ilanıyla yapılır.",
+      "Satış yargıyla iptal edilirse pay, şartları varsa eski malik adına tescil edilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun, md. 6/1"
+  }
+}
