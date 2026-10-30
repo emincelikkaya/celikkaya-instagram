@@ -1,0 +1,45 @@
+{
+  "no": 7,
+  "konu": "Kentsel dönüşümde harç ve vergi muafiyetleri",
+  "yayin": "2026-11-01T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=16849&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Kentsel dönüşümde hangi harç ve vergiler alınmaz?",
+    "subtitle": "Tapudan bankaya 5 muafiyet"
+  },
+  "items": [
+    {
+      "h": "Tapu ve noter harcı yok",
+      "p": "Kanun kapsamındaki ilk satış, devir, tescil ve ipotek işlemlerinde tapu ve noter harcı alınmaz."
+    },
+    {
+      "h": "Damga vergisi alınmaz",
+      "p": "Bu işlemler nedeniyle düzenlenen kâğıtlar damga vergisinden istisnadır."
+    },
+    {
+      "h": "Belediye harçları alınmaz",
+      "p": "Mevcut inşaat alanının bir buçuk katına kadar olan yeni inşaat alanı için belediyelerce harç ve ücret alınmaz."
+    },
+    {
+      "h": "Veraset ve intikal vergisi yok",
+      "p": "Dönüşüme ilişkin Kanun kapsamındaki işlemlerde veraset ve intikal vergisi ile döner sermaye ücretleri de alınmaz."
+    },
+    {
+      "h": "Kredide BSMV istisnası",
+      "p": "Maliklere ve en az bir yıldır oturan kiracılara verilen dönüşüm kredilerinde banka ve sigorta muameleleri vergisi alınmaz."
+    }
+  ],
+  "last": {
+    "title": "Kiracılar için 1 yıl şartı var.",
+    "accent": "1 yıl",
+    "bullets": [
+      "En az bir yıldır oturan kiracılar ve sınırlı ayni hak sahipleri de yararlanır.",
+      "Mevcut yapının imar mevzuatına uygun olup olmadığına bakılmaz.",
+      "Boş parselle birleştirmede tapu harcı muafiyeti alan oranında uygulanır."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 7/9-10; Uygulama Yönetmeliği md. 16"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "no": 6,
+  "konu": "Kira yardımı: kimler alır, nasıl başvurulur?",
+  "yayin": "2026-10-31T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=16849&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Kira yardımını kimler alabilir?",
+    "subtitle": "Süre, başvuru ve ödeme adım adım"
+  },
+  "items": [
+    {
+      "h": "Kimler yararlanabilir?",
+      "p": "Anlaşma ile tahliye edilen yapıların malikleri, kiracıları ve yapıda oturan sınırlı ayni hak sahipleri yararlanabilir."
+    },
+    {
+      "h": "Riskli yapıda süre 18 ay",
+      "p": "Riskli alan dışındaki riskli yapılarda yardım süresi 18 aydır. Aylık kira bedelini Başkanlık belirler."
+    },
+    {
+      "h": "Kiracıya tek seferlik ödeme",
+      "p": "Kiracı olarak oturanlara ve işyeri işletenlere aylık kira bedelinin iki katı kadar defaten yardım yapılabilir."
+    },
+    {
+      "h": "Başvuru için 1 yıl süre",
+      "p": "Başvuru, tahliye veya yıkım tarihinden itibaren bir yıl içinde yapılır. Riskli yapılarda Müdürlüğe veya yetkili İdareye."
+    },
+    {
+      "h": "Kira yardımı mı, faiz desteği mi?",
+      "p": "Aynı kişi ikisinden birden yararlanamaz. Kira yardımı alan faiz desteği, faiz desteği alan kira yardımı alamaz."
+    }
+  ],
+  "last": {
+    "title": "Başvuru süresini kaçırmayın: 1 yıl.",
+    "accent": "1 yıl",
+    "bullets": [
+      "Yardım tutarı ve süresi Başkanlık veya ilgili kurumca belirlenir.",
+      "Mümkünse kira yardımı yerine geçici konut veya işyeri tahsisi yapılabilir.",
+      "Uygun görülürse yardımın 1 yıla kadar olan kısmı peşin ödenebilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 5; Uygulama Yönetmeliği md. 16"
+  }
+}

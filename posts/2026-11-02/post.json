@@ -1,0 +1,44 @@
+{
+  "no": 8,
+  "konu": "Faiz destekli kredi imkânı",
+  "yayin": "2026-11-02T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=16849&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Kentsel dönüşümde faiz desteği nasıl alınır?",
+    "subtitle": "Kredi, süre ve şartlar"
+  },
+  "items": [
+    {
+      "h": "Desteği kim karşılar?",
+      "p": "Bankalardan kullanılan kredilere, Dönüşüm Projeleri Özel Hesabından karşılanmak üzere faiz desteği verilebilir."
+    },
+    {
+      "h": "Oranı Cumhurbaşkanı belirler",
+      "p": "Faiz desteğinin oranı ile usul ve esasları Cumhurbaşkanınca belirlenir."
+    },
+    {
+      "h": "Protokollü bankaya başvurun",
+      "p": "Kredi başvurusu, Başkanlıkla protokol imzalamış bankalara yapılmalıdır."
+    },
+    {
+      "h": "Süre: tahliyeden itibaren 3 yıl",
+      "p": "Tahliye veya yıkım tarihinden itibaren en geç üç yıl içinde bankaya kredi için başvurulmuş olması gerekir."
+    },
+    {
+      "h": "Kira yardımıyla birlikte olmaz",
+      "p": "Faiz desteğinden yararlanan kira yardımı alamaz; kira yardımı alan da faiz desteğinden yararlanamaz."
+    }
+  ],
+  "last": {
+    "title": "Bu kredilerde BSMV de alınmaz.",
+    "accent": "BSMV",
+    "bullets": [
+      "Maliklere ve en az bir yıldır oturan kiracılara verilen kredilerde banka ve sigorta muameleleri vergisi alınmaz.",
+      "Bu krediler konut finansmanı amaçlı kredilerden sayılır."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 7/6, 7/9; Uygulama Yönetmeliği md. 16/6-7"
+  }
+}
