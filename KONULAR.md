@@ -9,9 +9,9 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 3 | Riskli yapı raporuna itiraz hakkı ve süresi | #3 · 2026-10-28 |
 | 4 | 6306 sayılı kanunda karar çoğunluğu nasıl hesaplanır? | #4 · 2026-10-29 |
 | 5 | Anlaşmaya katılmayan malikin hissesine ne olur? | #5 · 2026-10-30 |
-| 6 | Kira yardımı: kimler alır, nasıl başvurulur? | |
-| 7 | Kentsel dönüşümde harç ve vergi muafiyetleri | |
-| 8 | Faiz destekli kredi imkânı | |
+| 6 | Kira yardımı: kimler alır, nasıl başvurulur? | #6 · 2026-10-31 |
+| 7 | Kentsel dönüşümde harç ve vergi muafiyetleri | #7 · 2026-11-01 |
+| 8 | Faiz destekli kredi imkânı | #8 · 2026-11-02 |
 | 9 | Kat karşılığı sözleşmesinde bakılması gereken maddeler | |
 | 10 | Daire paylaşımı ve kroki neden sözleşmeye eklenmeli? | |
 | 11 | Müteahhit seçerken sorulacak 5 soru | |
