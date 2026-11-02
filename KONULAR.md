@@ -12,7 +12,7 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 6 | Kira yardımı: kimler alır, nasıl başvurulur? | #6 · 2026-10-31 |
 | 7 | Kentsel dönüşümde harç ve vergi muafiyetleri | #7 · 2026-11-01 |
 | 8 | Faiz destekli kredi imkânı | #8 · 2026-11-02 |
-| 9 | Kat karşılığı sözleşmesinde bakılması gereken maddeler | |
+| 9 | Kat karşılığı sözleşmesinde bakılması gereken maddeler | #9 · 2026-11-03 |
 | 10 | Daire paylaşımı ve kroki neden sözleşmeye eklenmeli? | |
 | 11 | Müteahhit seçerken sorulacak 5 soru | |
 | 12 | Tahliye süreci adım adım | |
