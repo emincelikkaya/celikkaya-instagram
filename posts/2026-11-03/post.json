@@ -1,0 +1,44 @@
+{
+  "no": 9,
+  "konu": "Kat karşılığı sözleşmesinde bakılması gereken maddeler",
+  "yayin": "2026-11-03T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6098&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Kat karşılığı sözleşmesinde nelere bakılmalı?",
+    "subtitle": "İmzadan önce 5 kontrol"
+  },
+  "items": [
+    {
+      "h": "Resmi şekilde, noterde yapılmalı",
+      "p": "Taşınmaz satış vaadi içeren sözleşmeler resmi şekilde düzenlenmedikçe geçerli olmaz (TBK md. 237)."
+    },
+    {
+      "h": "Daire paylaşımı ve kroki ekli olsun",
+      "p": "Hangi dairenin kime düşeceği; kat, cephe ve m² bilgisiyle krokiye bağlanıp sözleşmeye eklenmeli."
+    },
+    {
+      "h": "Başlama ve teslim tarihi net olsun",
+      "p": "İşe başlama, teslim tarihi ve gecikme cezası açıkça yazılmazsa gecikmeyi ispatlamak zorlaşır."
+    },
+    {
+      "h": "Müteahhit işe başlamazsa fesih",
+      "p": "Bir yıl içinde işe başlanmaz veya iş en az altı aydır durursa malikler salt çoğunlukla fesih kararı alabilir."
+    },
+    {
+      "h": "Müteahhit payının satışı ilerlemeye bağlı",
+      "p": "Müteahhide düşen dairelerin satışı, inşaatın ilerleme seviyesine göre ve İdarenin izniyle yapılabilir."
+    }
+  ],
+  "last": {
+    "title": "Kat irtifakına kadar haciz koruması var.",
+    "accent": "haciz koruması",
+    "bullets": [
+      "Kat irtifakı kurulana kadar müteahhidin üçüncü kişilere borçları için taşınmaza haciz ve tedbir uygulanamaz.",
+      "Yapım işine başlandıktan sonra altı ay içinde kat irtifakı kurulmazsa bu koruma kalkar."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 6/10, 6/13, 6/14; 6098 sayılı TBK md. 237"
+  }
+}
