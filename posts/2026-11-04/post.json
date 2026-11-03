@@ -1,0 +1,45 @@
+{
+  "no": 10,
+  "konu": "Daire paylaşımı ve kroki neden sözleşmeye eklenmeli?",
+  "yayin": "2026-11-04T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=634&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6098&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Daire paylaşımı neden sözleşmeye eklenmeli?",
+    "subtitle": "Kroki ve arsa payında 5 kontrol"
+  },
+  "items": [
+    {
+      "h": "Hangi daire kimin, baştan belli",
+      "p": "Kat, cephe, daire numarası ve m² krokiyle sözleşmeye eklenirse teslimde \"bu daire benimdi\" tartışması yaşanmaz."
+    },
+    {
+      "h": "Sözleşme resmi şekilde yapılmalı",
+      "p": "Taşınmaz satışı vaadi içeren sözleşmeler resmi şekilde düzenlenmedikçe geçerli olmaz (TBK md. 237)."
+    },
+    {
+      "h": "Arsa payı daire değerine oranlı",
+      "p": "Arsa payı, her bağımsız bölümün konum ve büyüklüğüne göre hesaplanan değeriyle oranlı olarak projede tahsis edilir (KMK md. 3)."
+    },
+    {
+      "h": "Kroki onaylı projeyle uyumlu olsun",
+      "p": "Kat irtifakı; bölüm ölçüleri, numaraları ve arsa paylarını gösteren onaylı mimari projeye göre kurulur (KMK md. 12, 14)."
+    },
+    {
+      "h": "İpotek ve şerhler yeni dairenize geçer",
+      "p": "Eski dairedeki haklar ve şerhler, kat irtifakı aşamasında yalnızca o malike düşecek yeni bölüm üzerinde devam eder (6306 md. 6)."
+    }
+  ],
+  "last": {
+    "title": "Arsa payı sonradan değişmez.",
+    "accent": "sonradan değişmez",
+    "bullets": [
+      "Tahsis edilen arsa payı, bölümün değerinde sonradan oluşan artış veya azalma nedeniyle değiştirilemez.",
+      "Arsa payları oranlı tahsis edilmemişse her malik yeniden düzenlenmesi için mahkemeye başvurabilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 634 sayılı KMK md. 3, 12, 14; 6306 sayılı Kanun md. 6/1; 6098 sayılı TBK md. 237"
+  }
+}
