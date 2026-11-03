@@ -13,7 +13,7 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 7 | Kentsel dönüşümde harç ve vergi muafiyetleri | #7 · 2026-11-01 |
 | 8 | Faiz destekli kredi imkânı | #8 · 2026-11-02 |
 | 9 | Kat karşılığı sözleşmesinde bakılması gereken maddeler | #9 · 2026-11-03 |
-| 10 | Daire paylaşımı ve kroki neden sözleşmeye eklenmeli? | |
+| 10 | Daire paylaşımı ve kroki neden sözleşmeye eklenmeli? | #10 · 2026-11-04 |
 | 11 | Müteahhit seçerken sorulacak 5 soru | |
 | 12 | Tahliye süreci adım adım | |
 | 13 | Abonelik iptalleri: elektrik, su, doğalgaz | |
