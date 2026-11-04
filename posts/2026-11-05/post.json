@@ -1,0 +1,45 @@
+{
+  "no": 11,
+  "konu": "Müteahhit seçerken sorulacak 5 soru",
+  "yayin": "2026-11-05T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3194&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4708&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6098&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Müteahhit seçerken hangi 5 soruyu sormalı?",
+    "subtitle": "İmzadan önce 5 kontrol sorusu"
+  },
+  "items": [
+    {
+      "h": "Uygun sınıfta yetki belgeniz var mı?",
+      "p": "Bakanlıktan uygun sınıfta yetki belgesi almadan yapım işinin müteahhitliği üstlenilemez (3194 sayılı İmar Kanunu md. 28)."
+    },
+    {
+      "h": "Yetki belgeniz hiç iptal edildi mi?",
+      "p": "Projeye aykırı imalat süresinde giderilmezse belge 5 yıl, can ve mal güvenliğini tehdit ederse 10 yıl iptal edilir (md. 42)."
+    },
+    {
+      "h": "Şantiye şefi ve belgeli usta olacak mı?",
+      "p": "Müteahhit, fenni mesul denetimi olmadan işi sürdüremez ve yetki belgesi olmayan usta çalıştıramaz (İmar Kanunu md. 28)."
+    },
+    {
+      "h": "Bitirdiğiniz binaları görebilir miyim?",
+      "p": "Daha önce teslim ettiği binaları yerinde görün, oradaki maliklerle konuşun. Teslim süresine uyulup uyulmadığını sorun."
+    },
+    {
+      "h": "Sözleşme noterde mi yapılacak?",
+      "p": "Taşınmaz satışı vaadi içeren sözleşmeler resmi şekilde düzenlenmedikçe geçerli olmaz (TBK md. 237)."
+    }
+  ],
+  "last": {
+    "title": "Denetim müteahhitten bağımsızdır.",
+    "accent": "bağımsızdır",
+    "bullets": [
+      "Yapı denetim sözleşmesini yapı sahibi imzalar; anlaştığı müteahhidi bunun için vekil tayin edemez.",
+      "Müteahhit, ruhsat ve projeye aykırı, kusurlu imalattan doğan hasardan kusuru oranında sorumludur."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 3194 sayılı İmar Kanunu md. 28, 42; 4708 sayılı Kanun md. 2, 3; 6098 sayılı TBK md. 237"
+  }
+}
