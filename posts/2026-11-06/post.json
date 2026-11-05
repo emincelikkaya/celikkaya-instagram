@@ -1,0 +1,43 @@
+{
+  "no": 12,
+  "konu": "Tahliye süreci adım adım",
+  "yayin": "2026-11-06T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Riskli binada tahliye süreci nasıl işler?",
+    "subtitle": "Bahçelievler'de en sık sorulan 5 adım"
+  },
+  "items": [
+    {
+      "h": "Önce anlaşma esastır",
+      "p": "Kanun, riskli yapının yıktırılmasında ve tahliyesinde öncelikle maliklerle anlaşma yoluna gidilmesini esas alır."
+    },
+    {
+      "h": "Karar size nasıl bildirilir?",
+      "p": "Tutanak binaya asılır, e-Devlet'ten bildirilir ve muhtarlıkta 15 gün ilan edilir. İlanın son günü tebliğ sayılır."
+    },
+    {
+      "h": "Yıktırma için süre verilir",
+      "p": "Riskli yapının maliklerine, binayı kendilerinin yıktırması için en fazla 90 gün süre verilir."
+    },
+    {
+      "h": "Elektrik, su, doğal gaz kesilebilir",
+      "p": "İdare talep ederse, hak sahiplerinin görüşü alınarak riskli yapıya elektrik, su ve doğal gaz verilmez."
+    },
+    {
+      "h": "Süre dolarsa ne olur?",
+      "p": "Malik yıktırmazsa tahliye ve yıkımı idare yapar. Masraflar, hisseleri oranında maliklerden tahsil edilir."
+    }
+  ],
+  "last": {
+    "title": "Tahliyede kira yardımı yapılabilir.",
+    "accent": "kira yardımı",
+    "bullets": [
+      "Anlaşmayla tahliye edilen yapının maliklerine ve kiracılarına geçici konut veya kira yardımı yapılabilir.",
+      "Tahliyesi istenen yapılar Başkanlığın internet sayfasında da 15 gün ilan edilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 4/3, md. 5"
+  }
+}
