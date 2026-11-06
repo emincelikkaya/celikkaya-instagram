@@ -1,0 +1,44 @@
+{
+  "no": 14,
+  "konu": "Yıkım ruhsatı nedir?",
+  "yayin": "2026-11-08T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=16849&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Yıkım ruhsatı nedir, nasıl alınır?",
+    "subtitle": "Riskli binada yıkıma giden 5 adım"
+  },
+  "items": [
+    {
+      "h": "Kim başvurur?",
+      "p": "Maliklerden biri veya birkaçı ya da vekilleri İdareye başvurarak yıkım ruhsatını ister."
+    },
+    {
+      "h": "Hangi belgeler gerekir?",
+      "p": "Yapının boşaltıldığını ve elektrik, su, doğal gazın kapatıldığını gösteren kurum belgeleri ya da İdare tutanağı."
+    },
+    {
+      "h": "Yüksek binada ek şart",
+      "p": "Yüksekliği 21,50 metreyi aşan binalarda statik fenni mesul, yıkım sorumlusu olarak belirlenir."
+    },
+    {
+      "h": "Tüm maliklerin onayı gerekmez",
+      "p": "Riskli yapıda şartlar tamamsa yıkım ruhsatı, maliklerin muvafakati aranmadan düzenlenir."
+    },
+    {
+      "h": "Ne kadar sürer?",
+      "p": "Belgeler tamamlandığında yıkım ruhsatı 6 iş günü içinde düzenlenir."
+    }
+  ],
+  "last": {
+    "title": "Kararlar salt çoğunlukla alınır.",
+    "accent": "salt çoğunlukla",
+    "bullets": [
+      "Yıkım ve yapıma ilişkin izin ve ruhsat işlemleri, hisseleri oranında paydaşların salt çoğunluğu kararıyla yapılır.",
+      "İdare yıktırırsa masraflar, tebligattan sonra 1 ay içinde ve hisseleri oranında maliklerce ödenir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 6/1; Uygulama Yönetmeliği md. 8/3, md. 8/8"
+  }
+}

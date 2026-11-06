@@ -1,0 +1,44 @@
+{
+  "no": 15,
+  "konu": "Yapı ruhsatı ve proje onay süreci",
+  "yayin": "2026-11-09T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3194&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Yapı ruhsatı nasıl alınır, ne kadar sürer?",
+    "subtitle": "Bahçelievler'de yeni bina için 5 adım"
+  },
+  "items": [
+    {
+      "h": "Ruhsat her yapı için zorunlu",
+      "p": "Kanun kapsamındaki tüm yapılar için belediye veya valilikten yapı ruhsatı alınması mecburidir (İmar Kanunu md. 21)."
+    },
+    {
+      "h": "Başvuruyu kim yapar?",
+      "p": "Yapı sahipleri veya kanuni vekilleri belediyeye ya da valiliğe dilekçeyle başvurur."
+    },
+    {
+      "h": "Hangi projeler eklenir?",
+      "p": "Tapu, mimari, statik, elektrik ve tesisat projeleri, hesapları ve kroki dilekçeye eklenir (md. 22)."
+    },
+    {
+      "h": "Belediye en geç 30 günde verir",
+      "p": "Eksik yoksa ruhsat başvurudan itibaren en geç 30 gün içinde verilir; eksikler 15 gün içinde yazıyla bildirilir."
+    },
+    {
+      "h": "Ruhsatın da süresi var",
+      "p": "Yapıya ruhsat tarihinden itibaren 2 yılda başlanmalı, başlama süresiyle birlikte 5 yılda bitirilmeli; yoksa ruhsat hükümsüz sayılır."
+    }
+  ],
+  "last": {
+    "title": "Ruhsat yapı yerinde bulunmalı.",
+    "accent": "yapı yerinde",
+    "bullets": [
+      "Ruhsat ve eklerinin yapı yerinde bulundurulması mecburidir.",
+      "Ruhsatlı yapıda değişiklik yapmak da yeniden ruhsat alınmasına bağlıdır.",
+      "Eksikler giderilince ruhsat en geç 15 gün içinde verilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 3194 sayılı İmar Kanunu md. 21, 22, 29"
+  }
+}

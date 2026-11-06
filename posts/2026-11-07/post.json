@@ -1,0 +1,44 @@
+{
+  "no": 13,
+  "konu": "Abonelik iptalleri: elektrik, su, doğalgaz",
+  "yayin": "2026-11-07T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=16849&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Abonelikler ne zaman ve neden kapatılır?",
+    "subtitle": "Taşınmadan önce bilmeniz gereken 5 adım"
+  },
+  "items": [
+    {
+      "h": "Abonelikler neden kapatılmalı?",
+      "p": "Yıkım ruhsatı için yapının boşaltıldığı ve elektrik, su, doğal gazın kapatıldığı belgelenmelidir."
+    },
+    {
+      "h": "Kapatma nasıl ispatlanır?",
+      "p": "Kurumlardan alınan kapatma belgesiyle ya da İdarenin durumu yerinde tespit edip tutanağa bağlamasıyla."
+    },
+    {
+      "h": "Borçlar ödenmeden teslim edilmez",
+      "p": "Riskli alan uygulamalarında yapı; varsa su, elektrik, telefon, doğal gaz borçları ve emlak vergisi ödenerek boş teslim edilir."
+    },
+    {
+      "h": "Son endeksi kayıt altına alın",
+      "p": "Taşınmadan önce sayaçların son endeksini fotoğraflayın; kapatma başvurularını ve ödeme dekontlarını bir dosyada saklayın."
+    },
+    {
+      "h": "Ruhsat başvurusunu kim yapar?",
+      "p": "Yıkım ruhsatı, maliklerden biri veya birkaçının ya da vekillerinin başvurusu üzerine düzenlenir."
+    }
+  ],
+  "last": {
+    "title": "Kapatma belgesi ruhsat dosyasına girer.",
+    "accent": "ruhsat dosyasına",
+    "bullets": [
+      "İdare talep ederse, hak sahiplerinin görüşü alınarak riskli yapılara elektrik, su ve doğal gaz verilmez.",
+      "Riskli alanlarda tahliye, kurumun belirlediği takvime göre 15 gün içinde yapılır."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 4/3; Uygulama Yönetmeliği md. 8/3, md. 17"
+  }
+}
