@@ -16,9 +16,9 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 10 | Daire paylaşımı ve kroki neden sözleşmeye eklenmeli? | #10 · 2026-11-04 |
 | 11 | Müteahhit seçerken sorulacak 5 soru | #11 · 2026-11-05 |
 | 12 | Tahliye süreci adım adım | #12 · 2026-11-06 |
-| 13 | Abonelik iptalleri: elektrik, su, doğalgaz | |
-| 14 | Yıkım ruhsatı nedir? | |
-| 15 | Yapı ruhsatı ve proje onay süreci | |
+| 13 | Abonelik iptalleri: elektrik, su, doğalgaz | #13 · 2026-11-07 |
+| 14 | Yıkım ruhsatı nedir? | #14 · 2026-11-08 |
+| 15 | Yapı ruhsatı ve proje onay süreci | #15 · 2026-11-09 |
 | 16 | Zemin etüdü neden önemli? | |
 | 17 | Yapı denetim firmasının görevi | |
 | 18 | Hazır beton ve numune alma | |
