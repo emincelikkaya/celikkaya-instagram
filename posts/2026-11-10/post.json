@@ -1,0 +1,44 @@
+{
+  "no": 16,
+  "konu": "Zemin etüdü neden önemli?",
+  "yayin": "2026-11-10T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=23722&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Zemin etüdü nedir, neden bu kadar önemli?",
+    "subtitle": "Bahçelievler'de dönüşüme girecek binalar için 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Her parsel için ayrı rapor",
+      "p": "Zemin ve temel etüt raporu her parsel için ayrı hazırlanır; temel ve statik hesaplar için zemin verilerini içerir (md. 4)."
+    },
+    {
+      "h": "Statik proje bu rapora dayanır",
+      "p": "Binanın taşıyıcı sistemini gösteren statik proje, mimari projeye ve zemin ve temel etüdü raporuna uygun hazırlanır (md. 57)."
+    },
+    {
+      "h": "Zeminin nelerine bakılır?",
+      "p": "Taşıma gücü, yer altı suyu, oturma, sıvılaşma ve yer kayması gibi zeminin fiziki özellikleri incelenir."
+    },
+    {
+      "h": "Raporu kimler hazırlar?",
+      "p": "Çalışmanın içeriğine göre jeofizik, jeoloji ve inşaat mühendisleri hazırlar ve imzalar; formatı Bakanlık belirler."
+    },
+    {
+      "h": "Şantiyede de kayda geçer",
+      "p": "Zemin etüdü ve emniyet gerilmesi testleri, yapı denetim defterine işlenmesi gereken yapım aşamaları arasındadır (md. 68)."
+    }
+  ],
+  "last": {
+    "title": "Önce zemin, sonra proje.",
+    "accent": "Önce zemin",
+    "bullets": [
+      "Rapor, Bakanlıkça belirlenen usul ve esaslara göre hazırlanır.",
+      "İmar durum belgesiyle birlikte onaylı jeolojik ve jeoteknik etüt raporu da verilir.",
+      "Etüt ve projeler ruhsat eki olarak mühürlenip onaylanır."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: Planlı Alanlar İmar Yönetmeliği md. 4, 55, 57, 68"
+  }
+}
