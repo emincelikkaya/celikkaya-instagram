@@ -19,7 +19,7 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 13 | Abonelik iptalleri: elektrik, su, doğalgaz | #13 · 2026-11-07 |
 | 14 | Yıkım ruhsatı nedir? | #14 · 2026-11-08 |
 | 15 | Yapı ruhsatı ve proje onay süreci | #15 · 2026-11-09 |
-| 16 | Zemin etüdü neden önemli? | |
+| 16 | Zemin etüdü neden önemli? | #16 · 2026-11-10 |
 | 17 | Yapı denetim firmasının görevi | |
 | 18 | Hazır beton ve numune alma | |
 | 19 | Betonarme nedir? | |
