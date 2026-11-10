@@ -1,0 +1,44 @@
+{
+  "no": 17,
+  "konu": "Yapı denetim firmasının görevi",
+  "yayin": "2026-11-11T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4708&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Yapı denetim firması tam olarak ne yapar?",
+    "subtitle": "Bahçelievler'de yeni bina yaptıracaklar için 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Projeyi ve zemin raporunu inceler",
+      "p": "Zemin ve temel raporları ile uygulama projelerini inceler, uygunluk görüşünü ilgili idareye bildirir (md. 2/a)."
+    },
+    {
+      "h": "İnşaatı ruhsata göre denetler",
+      "p": "Yapının ruhsat ve ekleriyle mevzuata uygunluğunu denetler; aykırılığı üç iş günü içinde idareye bildirir (md. 2/c, g)."
+    },
+    {
+      "h": "Malzeme deneylerini laboratuvarda yaptırır",
+      "p": "Zemin, malzeme ve imalat deneylerini standartlara uygun olarak laboratuvarlarda yaptırır, sonuçları belgelendirir (md. 2/d, ı)."
+    },
+    {
+      "h": "İş güvenliğini de kontrol eder",
+      "p": "Çalışmaların sağlık güvenlik planına uygunluğunu kontrol eder; müteahhidi yazılı uyarır, uyulmazsa bildirir (md. 2/f)."
+    },
+    {
+      "h": "Taşıyıcı sistemden 15 yıl sorumlu",
+      "p": "İskân tarihinden itibaren taşıyıcı sistemden 15 yıl, diğer kısımlardan 2 yıl, kusuru oranında sorumludur (md. 3)."
+    }
+  ],
+  "last": {
+    "title": "Bağımsız denetim, güvenli bina.",
+    "accent": "Bağımsız denetim",
+    "bullets": [
+      "Yapı sahibi, anlaştığı müteahhidi denetim sözleşmesi için vekil tayin edemez.",
+      "Yapı denetim kuruluşu, denetim dışında ticari faaliyette bulunamaz.",
+      "Yapı bitince projeye uygunluk raporunu ilgili idareye verir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 4708 sayılı Yapı Denetimi Hakkında Kanun md. 2, 3"
+  }
+}
