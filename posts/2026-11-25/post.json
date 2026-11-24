@@ -1,0 +1,44 @@
+{
+  "no": 18,
+  "konu": "Hazır beton ve numune alma",
+  "yayin": "2026-11-25T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=11951&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Beton dökülürken numune nasıl alınır?",
+    "subtitle": "Bahçelievler'de inşaatı izleyen malikler için 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Önce kalıp ve donatı kontrol edilir",
+      "p": "Kalıp, demir donatı ve tesisat kontrol edilip tutanak düzenlenmeden beton dökümüne izin verilmez (md. 5/1-ç)."
+    },
+    {
+      "h": "Döküm, denetçi nezaretinde yapılır",
+      "p": "Beton, uygulama denetçisi inşaat mühendisi veya ilgili yardımcı kontrol elemanı nezaretinde dökülür (md. 5/1-ç)."
+    },
+    {
+      "h": "Numune döküm yerinde alınır",
+      "p": "Numuneler döküm yerinde, yapı denetim elemanlarının huzurunda, laboratuvarın teknik elemanlarınca standartlara uygun alınır (md. 5/1-ç)."
+    },
+    {
+      "h": "Deneyler izinli laboratuvarda yapılır",
+      "p": "Malzeme deneyleri Bakanlıkça izin belgesi verilen laboratuvarlarda yapılır; numuneleri laboratuvarın teknik elemanı taşır (md. 5/1-c, ç)."
+    },
+    {
+      "h": "Sonuç uygunsuzsa imalat durdurulur",
+      "p": "Uygunsuz deney raporu üç iş günü içinde idareye verilir; hatalı imalat düzeltilene kadar imalat durdurulur (md. 5/1-d)."
+    }
+  ],
+  "last": {
+    "title": "Doğru numune, güvenli beton.",
+    "accent": "Doğru numune",
+    "bullets": [
+      "Şantiyede yapılan deneyler olumluysa beton dökümüne izin verilir.",
+      "Her beton dökümünden sonra ayrı tutanak düzenlenir.",
+      "Uygun deney raporları hakediş ekinde idareye verilir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: Yapı Denetimi Uygulama Yönetmeliği md. 5, 6"
+  }
+}
