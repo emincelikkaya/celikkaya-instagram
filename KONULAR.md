@@ -21,7 +21,7 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 15 | Yapı ruhsatı ve proje onay süreci | #15 · 2026-11-09 |
 | 16 | Zemin etüdü neden önemli? | #16 · 2026-11-10 |
 | 17 | Yapı denetim firmasının görevi | #17 · 2026-11-11 |
-| 18 | Hazır beton ve numune alma | |
+| 18 | Hazır beton ve numune alma | #18 · 2026-11-25 |
 | 19 | Betonarme nedir? | |
 | 20 | Net m² ve brüt m² farkı | |
 | 21 | Kat planı nasıl okunur? | |
