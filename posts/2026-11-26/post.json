@@ -1,0 +1,44 @@
+{
+  "no": 19,
+  "konu": "Betonarme nedir?",
+  "yayin": "2026-11-26T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=24468&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Betonarme nedir, binanızı nasıl taşır?",
+    "subtitle": "Bahçelievler'de yeni binasını bekleyen malikler için 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Beton ve çelik birlikte çalışır",
+      "p": "Beton basınca, nervürlü donatı çeliği çekmeye dayanır; ikisi birlikte binanın taşıyıcı sistemini oluşturur."
+    },
+    {
+      "h": "En az C25 beton zorunlu",
+      "p": "Deprem yönetmeliği kapsamında yapılacak tüm betonarme binalarda C25'ten düşük dayanımlı beton kullanılamaz (TBDY 7.2.5.1)."
+    },
+    {
+      "h": "Donatı çeliği: B420C veya B500C",
+      "p": "Deprem etkisini karşılayan elemanlarda TS 708'deki B420C ve B500C nervürlü donatı çelikleri kullanılır (TBDY 7.2.5.3)."
+    },
+    {
+      "h": "Beton vibratörle yerleştirilir",
+      "p": "Nitelik denetimli, bakımı yapılmış ve vibratörle yerleştirilmiş beton zorunludur; kendiliğinden yerleşen beton da kullanılabilir (TBDY 7.2.5.2)."
+    },
+    {
+      "h": "Kolon kesiti de kurala bağlı",
+      "p": "Sünekliği yüksek dikdörtgen kolonların en küçük kenarı 300 mm'den, dairesel kolon çapı 350 mm'den az olamaz (TBDY 7.3.1.1)."
+    }
+  ],
+  "last": {
+    "title": "Sağlam beton, güvenli yuva.",
+    "accent": "Sağlam beton",
+    "bullets": [
+      "Türkiye Bina Deprem Yönetmeliği 1 Ocak 2019'da yürürlüğe girdi.",
+      "2007 tarihli eski deprem yönetmeliğinin yerini aldı.",
+      "Bu kurallar yönetmelik kapsamında yapılacak binalar içindir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: Türkiye Bina Deprem Yönetmeliği md. 4, 5 ve Ek 7.2.5, 7.3.1"
+  }
+}
