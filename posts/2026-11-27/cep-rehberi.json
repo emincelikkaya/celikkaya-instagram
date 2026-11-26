@@ -1,0 +1,45 @@
+{
+  "no": 20,
+  "label": "CEP REHBERİ",
+  "konu": "Kentsel Dönüşüm Cep Rehberi (en çok kaydedilen 5 gönderi)",
+  "yayin": "2026-11-27T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "secim": "Metricool, Instagram kaydetme (carousel + reels toplamı), 26 Ekim–26 Kasım: #7=21, #9=15, #3=10, #12=10, #4=7",
+  "cover": {
+    "title": "Kentsel dönüşümde en çok neyi kaydettiniz?",
+    "subtitle": "Cep rehberi: en çok kaydedilen 5 hap bilgi tek gönderide"
+  },
+  "items": [
+    {
+      "h": "Hap Bilgi #7: Harç ve vergiler",
+      "p": "Kanun kapsamındaki dönüşüm işlemlerinde tapu ve noter harcı alınmaz; mevcut inşaat alanının bir buçuk katına kadar belediye harcı da alınmaz."
+    },
+    {
+      "h": "Hap Bilgi #9: Kat karşılığı sözleşmesi",
+      "p": "Sözleşme noterde resmi şekilde yapılmalı. Bir yılda işe başlanmaz veya iş altı aydır durursa malikler salt çoğunlukla fesih kararı alabilir."
+    },
+    {
+      "h": "Hap Bilgi #3: Rapora itiraz",
+      "p": "Riskli yapı tespitine malikler 15 gün içinde itiraz edebilir. Muhtarlıktaki 15 günlük ilanın son günü tespit tebliğ edilmiş sayılır."
+    },
+    {
+      "h": "Hap Bilgi #12: Tahliye süreci",
+      "p": "Önce anlaşma esastır. Maliklere binayı yıktırmaları için en fazla 90 gün süre verilir; süre dolarsa tahliye ve yıkımı idare yapar."
+    },
+    {
+      "h": "Hap Bilgi #4: Karar çoğunluğu",
+      "p": "Kişi sayısına değil arsa payına bakılır. Kararlar, hisseleri oranında paydaşların salt çoğunluğuyla, yani payların yarısından fazlasıyla alınır."
+    }
+  ],
+  "last": {
+    "title": "Kaydedin, cebinizde dursun.",
+    "accent": "Kaydedin",
+    "bullets": [
+      "İtirazları 4 öğretim üyesi ve 3 Bakanlık/Başkanlık görevlisinden oluşan teknik heyet inceler.",
+      "Sözleşme feshi kararı da hisseleri oranında salt çoğunlukla alınır."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 3, 5, 6/1, 6/10, 7/9-10; TBK md. 237"
+  }
+}

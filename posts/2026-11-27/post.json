@@ -1,0 +1,44 @@
+{
+  "no": 20,
+  "konu": "Net m² ve brüt m² farkı",
+  "yayin": "2026-11-27T12:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=23722&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Net m² ile brüt m² arasındaki fark ne?",
+    "subtitle": "Sözleşmedeki metrekareyi okumadan önce 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Brüt alan: dış çizgiye kadar",
+      "p": "Brüt alan, bağımsız bölümün dış konturlarının çevrelediği alandır; şaft, ışıklık, hava bacası ve galeri boşlukları hariç tutulur."
+    },
+    {
+      "h": "Komşu duvarda orta aks esas",
+      "p": "Dış cephe dışındaki bölümlerde, örneğin komşu daireyle aradaki duvarda, dış kontur duvarın orta aksı olarak belirlenir."
+    },
+    {
+      "h": "Net alan: duvarlar arası temiz alan",
+      "p": "Net alan, içerden bağlantılı piyesleriyle birlikte bağımsız bölümün içinde, duvarlar arasında kalan temiz alandır."
+    },
+    {
+      "h": "Kolon ve bacalar nete girmez",
+      "p": "Kolonlar, tesisat ve hava bacaları, ışıklıklar, kapı ve pencere eşikleri ile 2,5 cm'yi geçmeyen sıva payları net alana dahil edilmez."
+    },
+    {
+      "h": "Balkon ve teraslar da nete girmez",
+      "p": "Balkon, teras, açık çıkma gibi en az bir cephesi açık mekânlar, eklentiler ve ortak alanlar net alanda değerlendirilmez."
+    }
+  ],
+  "last": {
+    "title": "Metrekareyi doğru okuyun.",
+    "accent": "doğru okuyun",
+    "bullets": [
+      "Genel brüt alan, toplam brüt alana ortak alanlardan düşen payın eklenmesiyle bulunur.",
+      "Toplam brüt alan, brüt alana eklentilerin brüt alanı eklenerek hesaplanır.",
+      "Sözleşmede hangi alanın yazıldığını mutlaka sorun."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: Planlı Alanlar İmar Yönetmeliği md. 4/1-ğ"
+  }
+}
