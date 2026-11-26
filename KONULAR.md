@@ -23,7 +23,7 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 17 | Yapı denetim firmasının görevi | #17 · 2026-11-11 |
 | 18 | Hazır beton ve numune alma | #18 · 2026-11-25 |
 | 19 | Betonarme nedir? | #19 · 2026-11-26 |
-| 20 | Net m² ve brüt m² farkı | |
+| 20 | Net m² ve brüt m² farkı | #20 · 2026-11-27 (reels; carousel yerine Cep Rehberi) |
 | 21 | Kat planı nasıl okunur? | |
 | 22 | Yapı kullanma izni (iskân) nedir? | |
 | 23 | Dükkân sahiplerinin hakları | |
