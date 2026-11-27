@@ -24,9 +24,9 @@ Durum sütunu boş olan ilk konu sıradaki gönderidir. Ajan kullandığı konuy
 | 18 | Hazır beton ve numune alma | #18 · 2026-11-25 |
 | 19 | Betonarme nedir? | #19 · 2026-11-26 |
 | 20 | Net m² ve brüt m² farkı | #20 · 2026-11-27 (reels; carousel yerine Cep Rehberi) |
-| 21 | Kat planı nasıl okunur? | |
-| 22 | Yapı kullanma izni (iskân) nedir? | |
-| 23 | Dükkân sahiplerinin hakları | |
+| 21 | Kat planı nasıl okunur? | #21 · 2026-11-28 |
+| 22 | Yapı kullanma izni (iskân) nedir? | #22 · 2026-11-29 |
+| 23 | Dükkân sahiplerinin hakları | #23 · 2026-11-30 |
 | 24 | Kiracıların hakları ve tahliye | |
 | 25 | Mirasçı ve hisseli tapularda dönüşüm | |
 | 26 | Vekaletle işlem yapmak | |
