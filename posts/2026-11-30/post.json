@@ -1,0 +1,44 @@
+{
+  "no": 23,
+  "konu": "Dükkân sahiplerinin hakları",
+  "yayin": "2026-11-30T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6306&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Dükkân sahibinin kentsel dönüşümde hakları neler?",
+    "subtitle": "Bahçelievler'de esnaf malik ve kiracılar için 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Dükkân sahibi de oy kullanır",
+      "p": "Karar, hisseleri oranında paydaşların salt çoğunluğuyla alınır; dükkân malikinin payı da bu hesaba dahildir (6306 sayılı Kanun md. 6)."
+    },
+    {
+      "h": "Geçici işyeri veya kira yardımı",
+      "p": "Anlaşma ile tahliye edilen yapıların maliklerine geçici konut veya işyeri tahsisi ya da kira yardımı yapılabilir (md. 5)."
+    },
+    {
+      "h": "Kiracı esnaf da kapsamda",
+      "p": "Bu yardımlar tahliye edilen yapının kiracılarına da yapılabilir; kanun \"yapılabilir\" der, yani otomatik bir hak değildir."
+    },
+    {
+      "h": "Bir yıllık işyeri şartı",
+      "p": "Yapıda en az bir yıldır işyeri bulunduğu tespit edilen kiracılara da işyeri veya dönüşüm projeleri özel hesabından kredi verilebilir (md. 6)."
+    },
+    {
+      "h": "Kredide BSMV istisnası",
+      "p": "Bu yapılarda en az bir yıldır işyeri bulunan malik ve kiracılara kullandırılan krediler, banka ve sigorta muameleleri vergisinden istisnadır (md. 7)."
+    }
+  ],
+  "last": {
+    "title": "Esnaf da sürecin tarafıdır.",
+    "accent": "sürecin tarafıdır",
+    "bullets": [
+      "Salt çoğunluk kuralı 7471 sayılı Kanunla 2023'te getirildi.",
+      "Yardımların şartlarını başvurudan önce idareye sorun.",
+      "Yeni dükkânın yeri ve büyüklüğü sözleşme ekinde görülmelidir."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 6306 sayılı Kanun md. 5, 6 ve 7"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "no": 22,
+  "konu": "Yapı kullanma izni (iskân) nedir?",
+  "yayin": "2026-11-29T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3194&MevzuatTur=1&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "İskân nedir, yeni dairede neden önemli?",
+    "subtitle": "Bahçelievler'de anahtar teslimden önce bilmeniz gereken 5 bilgi"
+  },
+  "items": [
+    {
+      "h": "Bina bitince izin zorunlu",
+      "p": "Yapı tamamen bittiğinde kullanılabilmesi için ruhsatı veren belediye veya valilikten yapı kullanma izni alınması zorunludur (İmar Kanunu md. 30)."
+    },
+    {
+      "h": "Biten bölümler için de alınabilir",
+      "p": "Kısmen kullanılması mümkün bölümler tamamlandığında, bu kısımların kullanılabilmesi için de yapı kullanma izni alınır."
+    },
+    {
+      "h": "Ruhsata ve projeye uygunluk aranır",
+      "p": "Mal sahibinin başvurusu üzerine yapının ruhsat ve eklerine uygun olduğu ve kullanımında fen bakımından sakınca bulunmadığı tespit edilir."
+    },
+    {
+      "h": "Belediyenin süresi: 30 gün",
+      "p": "Belediye veya valilik başvuruyu en geç 30 günde sonuçlandırmak zorundadır; aksi hâlde süre sonunda izin verilmiş sayılır."
+    },
+    {
+      "h": "İzin yoksa elektrik ve su yok",
+      "p": "Kullanma izni alınmayan yapılar izin alınana kadar elektrik, su ve kanalizasyon hizmetlerinden yararlandırılmaz; izin alan bağımsız bölümler yararlanır (md. 31)."
+    }
+  ],
+  "last": {
+    "title": "İskânı sorun, sonra taşının.",
+    "accent": "sonra taşının",
+    "bullets": [
+      "İnşaatın bitme günü, kullanma izninin verildiği tarihtir.",
+      "İzin, yapı sahibini ruhsata aykırılık sorumluluğundan kurtarmaz.",
+      "İzin, vergi, resim ve harç yükümlülüklerini de kaldırmaz."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: 3194 sayılı İmar Kanunu md. 30 ve 31"
+  }
+}

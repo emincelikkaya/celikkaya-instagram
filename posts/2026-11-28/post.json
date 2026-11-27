@@ -1,0 +1,44 @@
+{
+  "no": 21,
+  "konu": "Kat planı nasıl okunur?",
+  "yayin": "2026-11-28T20:30:00+03:00",
+  "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=23722&MevzuatTur=7&MevzuatTertip=5"
+  ],
+  "cover": {
+    "title": "Kat planına bakınca neye dikkat etmeli?",
+    "subtitle": "Bahçelievler'de yeni dairesini bekleyenler için 5 adım"
+  },
+  "items": [
+    {
+      "h": "Önce ölçeği ve kuzey okunu bulun",
+      "p": "Ölçek, plandaki bir santimetrenin gerçekte kaç santimetre olduğunu gösterir; kuzey oku dairenin hangi yöne baktığını anlatır."
+    },
+    {
+      "h": "Dolu çizilen kolonlar taşıyıcıdır",
+      "p": "Dolu veya taralı gösterilen kolon ve perdeler taşıyıcı sistemin parçasıdır; ileride tadilat yaparken bunlara dokunulmamalıdır."
+    },
+    {
+      "h": "Ölçü çizgileri oda boyutlarını verir",
+      "p": "Duvarların dışındaki ölçü çizgileri oda ve duvar uzunluklarını gösterir; eşya yerleşimini bu ölçülerle önceden planlayabilirsiniz."
+    },
+    {
+      "h": "Kapı ve pencere sembollerini tanıyın",
+      "p": "Çeyrek daire yay kapının açılış yönünü, duvar içindeki ince çift çizgiler pencereyi gösterir. Açılış yönü eşya yerleşimini etkiler."
+    },
+    {
+      "h": "Oda alanlarını toplayın",
+      "p": "Odaların içine yazılan alanları toplayıp sözleşmedeki metrekareyle karşılaştırın; yazılan alanın net mi brüt mü olduğunu mutlaka sorun."
+    }
+  ],
+  "last": {
+    "title": "Planı okuyun, sonra imzalayın.",
+    "accent": "sonra imzalayın",
+    "bullets": [
+      "Her konutta en az 1 oturma odası, 1 yatak odası, mutfak, banyo ve tuvalet bulunur.",
+      "Planın onaylı mimari projeyle aynı olduğunu kontrol edin.",
+      "Anlamadığınız sembolü mimarınıza sorun."
+    ],
+    "note": "Bilgilendirme amaçlıdır. Kaynak: Planlı Alanlar İmar Yönetmeliği md. 5/25"
+  }
+}
